@@ -1,4 +1,6 @@
 Neoterminal2::Application.routes.draw do
+  resources :asientos
+
   resources :mantenimientos
 
   resources :autobuses

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  asiento_no: MyString
+  tipo: MyString
+  is_active: false
+  autobus_id: 
+
+two:
+  asiento_no: MyString
+  tipo: MyString
+  is_active: false
+  autobus_id: 

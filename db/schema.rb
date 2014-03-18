@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140318041101) do
+ActiveRecord::Schema.define(version: 20140318043930) do
+
+  create_table "asientos", force: true do |t|
+    t.string   "asiento_no"
+    t.string   "tipo"
+    t.boolean  "is_active"
+    t.integer  "autobus_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "asientos", ["autobus_id"], name: "index_asientos_on_autobus_id", using: :btree
 
   create_table "autobuses", force: true do |t|
     t.string   "codigo"

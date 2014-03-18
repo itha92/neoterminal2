@@ -1,0 +1,40 @@
+<div class="row">
+	<h1>Listing asientos</h1>
+</div>
+<div class="row">
+	<table>
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Asiento no</th>
+			<th>Tipo</th>
+			<th>Is active</th>
+			<th>Autobus</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @asientos.each do |asiento| %>
+		<tr>
+			<td><%= asiento.id %></td>
+			<td><%= asiento.asiento_no %></td>
+			<td><%= asiento.tipo %></td>
+			<td><%= asiento.is_active %></td>
+			<td><%= asiento.autobus %></td>
+			<td><%= link_to 'Show', asiento %></td>
+			<td><%= link_to 'Edit', edit_asiento_path(asiento) %></td>
+			<td><%= link_to 'Destroy', asiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		</tr>
+		<% end %>
+	</tbody>
+	</table>
+	
+</div>
+
+<div class="row">
+	<%= link_to 'New Asiento', new_asiento_path %>
+</div>
+
