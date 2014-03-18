@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  precio: 9.99
+  clase: MyString
+  destino: MyString
+  origen: MyString
+
+two:
+  precio: 9.99
+  clase: MyString
+  destino: MyString
+  origen: MyString

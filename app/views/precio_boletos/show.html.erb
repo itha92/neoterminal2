@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @precio_boleto.precio %>
+</p>
+
+<p>
+  <strong>Clase:</strong>
+  <%= @precio_boleto.clase %>
+</p>
+
+<p>
+  <strong>Destino:</strong>
+  <%= @precio_boleto.destino %>
+</p>
+
+<p>
+  <strong>Origen:</strong>
+  <%= @precio_boleto.origen %>
+</p>
+
+<%= link_to 'Edit', edit_precio_boleto_path(@precio_boleto) %> |
+<%= link_to 'Back', precio_boletos_path %>

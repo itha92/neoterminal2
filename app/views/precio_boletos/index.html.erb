@@ -1,0 +1,33 @@
+<h1>Listing precio_boletos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Precio</th>
+      <th>Clase</th>
+      <th>Destino</th>
+      <th>Origen</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @precio_boletos.each do |precio_boleto| %>
+      <tr>
+        <td><%= precio_boleto.precio %></td>
+        <td><%= precio_boleto.clase %></td>
+        <td><%= precio_boleto.destino %></td>
+        <td><%= precio_boleto.origen %></td>
+        <td><%= link_to 'Show', precio_boleto %></td>
+        <td><%= link_to 'Edit', edit_precio_boleto_path(precio_boleto) %></td>
+        <td><%= link_to 'Destroy', precio_boleto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Precio boleto', new_precio_boleto_path %>

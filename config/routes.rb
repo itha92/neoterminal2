@@ -1,4 +1,6 @@
 Neoterminal2::Application.routes.draw do
+  resources :precio_boletos
+
   resources :asientos
 
   resources :mantenimientos
