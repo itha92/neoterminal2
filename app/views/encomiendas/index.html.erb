@@ -32,7 +32,7 @@
         <td><%= encomienda.is_shipped %></td>
         <td><%= encomienda.is_onhold %></td>
         <td><%= encomienda.fecha %></td>
-        <td><%= encomienda.terminal %></td>
+        <td><%= encomienda.terminal.codigo %></td>
         <td><%= encomienda.precio_paquete.tipo_paquete %></td>
         <td><%= link_to 'Show', encomienda %></td>
         <td><%= link_to 'Edit', edit_encomienda_path(encomienda) %></td>
