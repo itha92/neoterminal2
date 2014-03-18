@@ -1,0 +1,40 @@
+<div class="row">
+	<h1>Listing mantenimientos</h1>
+</div>
+<div class="row">
+		
+	<table>
+		<thead>
+		<tr>
+			<th>ID</th>
+			<th>Fecha</th>
+			<th>Observacion</th>
+			<th>Kilometraje</th>
+			<th>Precio</th>
+			<th>Autobus</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+		</thead>
+
+		<tbody>
+		<% @mantenimientos.each do |mantenimiento| %>
+			<tr>
+			<td><%= mantenimiento.id %></td>
+			<td><%= mantenimiento.fecha %></td>
+			<td><%= mantenimiento.observacion %></td>
+			<td><%= mantenimiento.kilometraje %></td>
+			<td><%= mantenimiento.precio %></td>
+			<td><%= mantenimiento.autobus %></td>
+			<td><%= link_to 'Show', mantenimiento %></td>
+			<td><%= link_to 'Edit', edit_mantenimiento_path(mantenimiento) %></td>
+			<td><%= link_to 'Destroy', mantenimiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+</div>
+<div class="row">
+	<%= link_to 'New Mantenimiento', new_mantenimiento_path, class:"button" %>
+</div>

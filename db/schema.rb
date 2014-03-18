@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140318030350) do
+ActiveRecord::Schema.define(version: 20140318041101) do
 
   create_table "autobuses", force: true do |t|
     t.string   "codigo"
@@ -22,5 +22,17 @@ ActiveRecord::Schema.define(version: 20140318030350) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "mantenimientos", force: true do |t|
+    t.date     "fecha"
+    t.text     "observacion"
+    t.string   "kilometraje"
+    t.decimal  "precio",      precision: 10, scale: 0
+    t.integer  "autobus_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "mantenimientos", ["autobus_id"], name: "index_mantenimientos_on_autobus_id", using: :btree
 
 end
