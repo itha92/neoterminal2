@@ -1,29 +1,39 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Codigo:</strong>
-  <%= @autobus.codigo %>
-</p>
-
-<p>
-  <strong>Marca:</strong>
-  <%= @autobus.marca %>
-</p>
-
-<p>
-  <strong>Modelo:</strong>
-  <%= @autobus.modelo %>
-</p>
-
-<p>
-  <strong>Capacidad:</strong>
-  <%= @autobus.capacidad %>
-</p>
-
-<p>
-  <strong>Is active:</strong>
-  <%= @autobus.is_active %>
-</p>
-
-<%= link_to 'Edit', edit_autobus_path(@autobus) %> |
-<%= link_to 'Back', autobuses_path %>
+<div class="row">
+	<div class="large-2 columns">
+		<strong>Codigo:</strong>
+		<div class="panel">
+			<%= @autobus.codigo %>
+		</div>
+	</div>
+	<div class="large-3 columns">
+		<p>
+			<strong>Marca:</strong>
+			<%= @autobus.marca %>
+		</p>
+	</div>
+	<div class="large-3 columns">
+		<p>
+			<strong>Modelo:</strong>
+			<%= @autobus.modelo %>
+		</p>
+	</div>
+	<div class="large-2 columns">
+		<p>
+			<strong>Capacidad:</strong>
+			<%= @autobus.capacidad %>
+		</p>
+	</div>
+	<div class="large-2 columns">
+		<p>
+			<strong>Is active:</strong>
+			<%= @autobus.is_active %>
+		</p>
+	</div>
+</div>
+<div class="row">
+	<div class="large-12 columns">
+		<%= link_to 'Edit', edit_autobus_path(@autobus), class:"button" %> |
+		<%= link_to 'Back', autobuses_path, class:"button" %>
+	</div>
+</div>
