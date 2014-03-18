@@ -25,4 +25,3 @@ test:
 production:
   adapter: postgresql
   database: neot_db
-  
