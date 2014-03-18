@@ -1,37 +1,53 @@
 <%= form_for(@autobus) do |f| %>
-  <% if @autobus.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@autobus.errors.count, "error") %> prohibited this autobus from being saved:</h2>
+	<% if @autobus.errors.any? %>
+	<div id="error_explanation">
+		<h2><%= pluralize(@autobus.errors.count, "error") %> prohibited this autobus from being saved:</h2>
 
-      <ul>
-      <% @autobus.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+		<ul>
+		<% @autobus.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+		<% end %>
+		</ul>
+	</div>
+	<% end %>
 
-  <div class="field">
-    <%= f.label :codigo %><br>
-    <%= f.text_field :codigo %>
-  </div>
-  <div class="field">
-    <%= f.label :marca %><br>
-    <%= f.text_field :marca %>
-  </div>
-  <div class="field">
-    <%= f.label :modelo %><br>
-    <%= f.text_field :modelo %>
-  </div>
-  <div class="field">
-    <%= f.label :capacidad %><br>
-    <%= f.number_field :capacidad %>
-  </div>
-  <div class="field">
-    <%= f.label :is_active %><br>
-    <%= f.check_box :is_active %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<div class="row">
+	<div class="large-4 columns">
+		<div class="field">
+		<%= f.label :codigo %><br>
+		<%= f.text_field :codigo %>
+		</div>
+	</div>
+	<div class="large-4 columns">
+		<div class="field">
+		<%= f.label :marca %><br>
+		<%= f.text_field :marca %>
+		</div>
+	</div>
+	<div class="large-4 columns">
+		<div class="field">
+		<%= f.label :modelo %><br>
+		<%= f.text_field :modelo %>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="large-4 columns">
+		<div class="field">
+		<%= f.label :capacidad %><br>
+		<%= f.number_field :capacidad %>
+		</div>
+	</div>
+	<div class="large-4 columns">
+		<div class="field">
+		<%= f.label :is_active %><br>
+		<%= f.check_box :is_active %>
+		</div>
+	</div>
+	<div class="large-4 columns">
+		<div class="actions row">
+		<%= f.submit %>
+		</div>
+	</div>
+</div>
 <% end %>
