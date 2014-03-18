@@ -1,4 +1,4 @@
-<h1>Listing autobuses</h1>
+<h1>Autobuses</h1>
 
 <table>
   <thead>
@@ -22,9 +22,9 @@
         <td><%= autobus.modelo %></td>
         <td><%= autobus.capacidad %></td>
         <td><%= autobus.is_active %></td>
-        <td><%= link_to 'Show', autobus %></td>
-        <td><%= link_to 'Edit', edit_autobus_path(autobus) %></td>
-        <td><%= link_to 'Destroy', autobus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', autobus,class:"button" %></td>
+        <td><%= link_to 'Edit', edit_autobus_path(autobus), class:"button" %></td>
+        <td><%= link_to 'Destroy', autobus, method: :delete, data: { confirm: 'Are you sure?' },class:"button" %></td>
       </tr>
     <% end %>
   </tbody>
