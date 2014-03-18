@@ -53,7 +53,7 @@
   </div>
   <div class="field">
     <%= f.label :precio_paquete_id %><br>
-    <%= f.text_field :precio_paquete_id %>
+    <%= collection_select(:encomienda, :precio_paquete_id, @precios, :id, :tipo_paquete) %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -26,7 +26,7 @@
 			<td><%= mantenimiento.observacion %></td>
 			<td><%= mantenimiento.kilometraje %></td>
 			<td><%= mantenimiento.precio %></td>
-			<td><%= mantenimiento.autobus %></td>
+			<td><%= mantenimiento.autobus.codigo %></td>
 			<td><%= link_to 'Show', mantenimiento %></td>
 			<td><%= link_to 'Edit', edit_mantenimiento_path(mantenimiento) %></td>
 			<td><%= link_to 'Destroy', mantenimiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -38,8 +38,8 @@
 		</div>
 		<div class="large-4 columns">
 			<div class="field">
-			<%= f.label :autobus_id %><br>
-			<%= f.text_field :autobus_id %>
+			<%= f.label :autobus_id%>
+			<%= collection_select(:mantenimiento, :autobus_id, @autobuses, :id, :codigo) %>
 			</div>
 		</div>
 	</div>

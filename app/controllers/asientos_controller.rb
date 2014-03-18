@@ -15,10 +15,12 @@ class AsientosController < ApplicationController
   # GET /asientos/new
   def new
     @asiento = Asiento.new
+    @autobuses = Autobus.all
   end
 
   # GET /asientos/1/edit
   def edit
+    @autobuses = Autobus.all
   end
 
   # POST /asientos

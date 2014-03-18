@@ -23,7 +23,7 @@
 			<td><%= asiento.asiento_no %></td>
 			<td><%= asiento.tipo %></td>
 			<td><%= asiento.is_active %></td>
-			<td><%= asiento.autobus %></td>
+			<td><%= asiento.autobus.codigo %></td>
 			<td><%= link_to 'Show', asiento %></td>
 			<td><%= link_to 'Edit', edit_asiento_path(asiento) %></td>
 			<td><%= link_to 'Destroy', asiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>

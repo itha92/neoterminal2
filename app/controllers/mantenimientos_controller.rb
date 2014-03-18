@@ -15,10 +15,12 @@ class MantenimientosController < ApplicationController
   # GET /mantenimientos/new
   def new
     @mantenimiento = Mantenimiento.new
+    @autobuses = Autobus.all
   end
 
   # GET /mantenimientos/1/edit
   def edit
+    @autobuses = Autobus.all
   end
 
   # POST /mantenimientos

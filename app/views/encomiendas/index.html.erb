@@ -33,7 +33,7 @@
         <td><%= encomienda.is_onhold %></td>
         <td><%= encomienda.fecha %></td>
         <td><%= encomienda.terminal %></td>
-        <td><%= encomienda.precio_paquete %></td>
+        <td><%= encomienda.precio_paquete.tipo_paquete %></td>
         <td><%= link_to 'Show', encomienda %></td>
         <td><%= link_to 'Edit', edit_encomienda_path(encomienda) %></td>
         <td><%= link_to 'Destroy', encomienda, method: :delete, data: { confirm: 'Are you sure?' } %></td>

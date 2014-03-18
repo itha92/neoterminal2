@@ -21,7 +21,7 @@
         <td><%= itinerario.destino %></td>
         <td><%= itinerario.origen %></td>
         <td><%= itinerario.fecha %></td>
-        <td><%= itinerario.terminal %></td>
+        <td><%= itinerario.terminal.codigo %></td>
         <td><%= link_to 'Show', itinerario %></td>
         <td><%= link_to 'Edit', edit_itinerario_path(itinerario) %></td>
         <td><%= link_to 'Destroy', itinerario, method: :delete, data: { confirm: 'Are you sure?' } %></td>

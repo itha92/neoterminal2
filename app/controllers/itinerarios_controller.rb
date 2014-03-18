@@ -15,10 +15,12 @@ class ItinerariosController < ApplicationController
   # GET /itinerarios/new
   def new
     @itinerario = Itinerario.new
+    @terminales = Terminal.all
   end
 
   # GET /itinerarios/1/edit
   def edit
+    @terminales = Terminal.all
   end
 
   # POST /itinerarios
