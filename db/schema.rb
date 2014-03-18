@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140318231155) do
+ActiveRecord::Schema.define(version: 20140318234401) do
 
   create_table "asientos", force: true do |t|
     t.string   "asiento_no"
@@ -33,6 +33,57 @@ ActiveRecord::Schema.define(version: 20140318231155) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "boletos", force: true do |t|
+    t.date     "fecha"
+    t.decimal  "descuento",         precision: 10, scale: 0
+    t.decimal  "subtotal",          precision: 10, scale: 0
+    t.decimal  "total",             precision: 10, scale: 0
+    t.integer  "precio_boletos_id"
+    t.integer  "terminal_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "boletos", ["precio_boletos_id"], name: "index_boletos_on_precio_boletos_id", using: :btree
+  add_index "boletos", ["terminal_id"], name: "index_boletos_on_terminal_id", using: :btree
+
+  create_table "empleados", force: true do |t|
+    t.string   "identidad"
+    t.string   "nombre"
+    t.text     "direccion"
+    t.string   "telefono"
+    t.date     "fecha_nacimiento"
+    t.string   "puesto"
+    t.boolean  "is_active"
+    t.boolean  "tiene_bus"
+    t.integer  "terminal_id"
+    t.integer  "autobus_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "empleados", ["autobus_id"], name: "index_empleados_on_autobus_id", using: :btree
+  add_index "empleados", ["terminal_id"], name: "index_empleados_on_terminal_id", using: :btree
+
+  create_table "encomiendas", force: true do |t|
+    t.string   "destinatario"
+    t.string   "remitente"
+    t.decimal  "peso",              precision: 10, scale: 0
+    t.string   "destino"
+    t.string   "origen"
+    t.boolean  "is_delivered"
+    t.boolean  "is_shipped"
+    t.boolean  "is_onhold"
+    t.date     "fecha"
+    t.integer  "terminal_id"
+    t.integer  "precio_paquete_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "encomiendas", ["precio_paquete_id"], name: "index_encomiendas_on_precio_paquete_id", using: :btree
+  add_index "encomiendas", ["terminal_id"], name: "index_encomiendas_on_terminal_id", using: :btree
 
   create_table "itinerarios", force: true do |t|
     t.time     "hora_salida"
@@ -58,11 +109,31 @@ ActiveRecord::Schema.define(version: 20140318231155) do
 
   add_index "mantenimientos", ["autobus_id"], name: "index_mantenimientos_on_autobus_id", using: :btree
 
+  create_table "pasajeros", force: true do |t|
+    t.string   "nombre"
+    t.string   "identidad"
+    t.date     "fecha_nacimiento"
+    t.integer  "asiento_id"
+    t.integer  "boleto_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pasajeros", ["asiento_id"], name: "index_pasajeros_on_asiento_id", using: :btree
+  add_index "pasajeros", ["boleto_id"], name: "index_pasajeros_on_boleto_id", using: :btree
+
   create_table "precio_boletos", force: true do |t|
     t.decimal  "precio",     precision: 10, scale: 0
     t.string   "clase"
     t.string   "destino"
     t.string   "origen"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "precio_paquetes", force: true do |t|
+    t.string   "tipo_paquete"
+    t.decimal  "precio",       precision: 10, scale: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
