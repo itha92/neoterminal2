@@ -1,0 +1,35 @@
+<h1>Listing autobuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codigo</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Capacidad</th>
+      <th>Is active</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @autobuses.each do |autobus| %>
+      <tr>
+        <td><%= autobus.codigo %></td>
+        <td><%= autobus.marca %></td>
+        <td><%= autobus.modelo %></td>
+        <td><%= autobus.capacidad %></td>
+        <td><%= autobus.is_active %></td>
+        <td><%= link_to 'Show', autobus %></td>
+        <td><%= link_to 'Edit', edit_autobus_path(autobus) %></td>
+        <td><%= link_to 'Destroy', autobus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Autobus', new_autobus_path %>
