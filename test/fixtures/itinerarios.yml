@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hora_salida: 2014-03-18 16:11:55
+  destino: MyString
+  origen: MyString
+  fecha: 2014-03-18
+  terminal_id: 
+
+two:
+  hora_salida: 2014-03-18 16:11:55
+  destino: MyString
+  origen: MyString
+  fecha: 2014-03-18
+  terminal_id: 

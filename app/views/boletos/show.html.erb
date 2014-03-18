@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @boleto.fecha %>
+</p>
+
+<p>
+  <strong>Descuento:</strong>
+  <%= @boleto.descuento %>
+</p>
+
+<p>
+  <strong>Subtotal:</strong>
+  <%= @boleto.subtotal %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @boleto.total %>
+</p>
+
+<p>
+  <strong>Precio boletos:</strong>
+  <%= @boleto.precio_boletos %>
+</p>
+
+<p>
+  <strong>Terminal:</strong>
+  <%= @boleto.terminal %>
+</p>
+
+<%= link_to 'Edit', edit_boleto_path(@boleto) %> |
+<%= link_to 'Back', boletos_path %>

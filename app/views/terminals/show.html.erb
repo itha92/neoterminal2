@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @terminal.codigo %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @terminal.telefono %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @terminal.direccion %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @terminal.is_active %>
+</p>
+
+<%= link_to 'Edit', edit_terminal_path(@terminal) %> |
+<%= link_to 'Back', terminals_path %>

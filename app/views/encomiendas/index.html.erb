@@ -1,0 +1,47 @@
+<h1>Listing encomiendas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Destinatario</th>
+      <th>Remitente</th>
+      <th>Peso</th>
+      <th>Destino</th>
+      <th>Origen</th>
+      <th>Is delivered</th>
+      <th>Is shipped</th>
+      <th>Is onhold</th>
+      <th>Fecha</th>
+      <th>Terminal</th>
+      <th>Precio paquete</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @encomiendas.each do |encomienda| %>
+      <tr>
+        <td><%= encomienda.destinatario %></td>
+        <td><%= encomienda.remitente %></td>
+        <td><%= encomienda.peso %></td>
+        <td><%= encomienda.destino %></td>
+        <td><%= encomienda.origen %></td>
+        <td><%= encomienda.is_delivered %></td>
+        <td><%= encomienda.is_shipped %></td>
+        <td><%= encomienda.is_onhold %></td>
+        <td><%= encomienda.fecha %></td>
+        <td><%= encomienda.terminal %></td>
+        <td><%= encomienda.precio_paquete %></td>
+        <td><%= link_to 'Show', encomienda %></td>
+        <td><%= link_to 'Edit', edit_encomienda_path(encomienda) %></td>
+        <td><%= link_to 'Destroy', encomienda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Encomienda', new_encomienda_path %>

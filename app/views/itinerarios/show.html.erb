@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hora salida:</strong>
+  <%= @itinerario.hora_salida %>
+</p>
+
+<p>
+  <strong>Destino:</strong>
+  <%= @itinerario.destino %>
+</p>
+
+<p>
+  <strong>Origen:</strong>
+  <%= @itinerario.origen %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @itinerario.fecha %>
+</p>
+
+<p>
+  <strong>Terminal:</strong>
+  <%= @itinerario.terminal %>
+</p>
+
+<%= link_to 'Edit', edit_itinerario_path(@itinerario) %> |
+<%= link_to 'Back', itinerarios_path %>

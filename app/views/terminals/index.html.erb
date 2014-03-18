@@ -1,0 +1,33 @@
+<h1>Listing terminals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codigo</th>
+      <th>Telefono</th>
+      <th>Direccion</th>
+      <th>Is active</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @terminals.each do |terminal| %>
+      <tr>
+        <td><%= terminal.codigo %></td>
+        <td><%= terminal.telefono %></td>
+        <td><%= terminal.direccion %></td>
+        <td><%= terminal.is_active %></td>
+        <td><%= link_to 'Show', terminal %></td>
+        <td><%= link_to 'Edit', edit_terminal_path(terminal) %></td>
+        <td><%= link_to 'Destroy', terminal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Terminal', new_terminal_path %>

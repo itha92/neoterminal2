@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  identidad: 
+  nombre: MyString
+  direccion: MyText
+  telefono: MyString
+  fecha_nacimiento: 2014-03-18
+  puesto: MyString
+  is_active: false
+  tiene_bus: false
+  terminal_id: 
+  autobus_id: 
+
+two:
+  identidad: 
+  nombre: MyString
+  direccion: MyText
+  telefono: MyString
+  fecha_nacimiento: 2014-03-18
+  puesto: MyString
+  is_active: false
+  tiene_bus: false
+  terminal_id: 
+  autobus_id: 

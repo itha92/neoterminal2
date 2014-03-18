@@ -1,0 +1,29 @@
+<h1>Listing precio_paquetes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo paquete</th>
+      <th>Precio</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @precio_paquetes.each do |precio_paquete| %>
+      <tr>
+        <td><%= precio_paquete.tipo_paquete %></td>
+        <td><%= precio_paquete.precio %></td>
+        <td><%= link_to 'Show', precio_paquete %></td>
+        <td><%= link_to 'Edit', edit_precio_paquete_path(precio_paquete) %></td>
+        <td><%= link_to 'Destroy', precio_paquete, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Precio paquete', new_precio_paquete_path %>

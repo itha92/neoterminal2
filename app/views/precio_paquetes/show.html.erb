@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo paquete:</strong>
+  <%= @precio_paquete.tipo_paquete %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @precio_paquete.precio %>
+</p>
+
+<%= link_to 'Edit', edit_precio_paquete_path(@precio_paquete) %> |
+<%= link_to 'Back', precio_paquetes_path %>

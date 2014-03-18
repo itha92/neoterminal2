@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Destinatario:</strong>
+  <%= @encomienda.destinatario %>
+</p>
+
+<p>
+  <strong>Remitente:</strong>
+  <%= @encomienda.remitente %>
+</p>
+
+<p>
+  <strong>Peso:</strong>
+  <%= @encomienda.peso %>
+</p>
+
+<p>
+  <strong>Destino:</strong>
+  <%= @encomienda.destino %>
+</p>
+
+<p>
+  <strong>Origen:</strong>
+  <%= @encomienda.origen %>
+</p>
+
+<p>
+  <strong>Is delivered:</strong>
+  <%= @encomienda.is_delivered %>
+</p>
+
+<p>
+  <strong>Is shipped:</strong>
+  <%= @encomienda.is_shipped %>
+</p>
+
+<p>
+  <strong>Is onhold:</strong>
+  <%= @encomienda.is_onhold %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @encomienda.fecha %>
+</p>
+
+<p>
+  <strong>Terminal:</strong>
+  <%= @encomienda.terminal %>
+</p>
+
+<p>
+  <strong>Precio paquete:</strong>
+  <%= @encomienda.precio_paquete %>
+</p>
+
+<%= link_to 'Edit', edit_encomienda_path(@encomienda) %> |
+<%= link_to 'Back', encomiendas_path %>

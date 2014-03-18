@@ -1,0 +1,25 @@
+<%= form_for(@precio_paquete) do |f| %>
+  <% if @precio_paquete.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@precio_paquete.errors.count, "error") %> prohibited this precio_paquete from being saved:</h2>
+
+      <ul>
+      <% @precio_paquete.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipo_paquete %><br>
+    <%= f.text_field :tipo_paquete %>
+  </div>
+  <div class="field">
+    <%= f.label :precio %><br>
+    <%= f.text_field :precio %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

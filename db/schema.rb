@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140318043930) do
+ActiveRecord::Schema.define(version: 20140318231155) do
 
   create_table "asientos", force: true do |t|
     t.string   "asiento_no"
@@ -34,6 +34,18 @@ ActiveRecord::Schema.define(version: 20140318043930) do
     t.datetime "updated_at"
   end
 
+  create_table "itinerarios", force: true do |t|
+    t.time     "hora_salida"
+    t.string   "destino"
+    t.string   "origen"
+    t.date     "fecha"
+    t.integer  "terminal_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "itinerarios", ["terminal_id"], name: "index_itinerarios_on_terminal_id", using: :btree
+
   create_table "mantenimientos", force: true do |t|
     t.date     "fecha"
     t.text     "observacion"
@@ -45,5 +57,23 @@ ActiveRecord::Schema.define(version: 20140318043930) do
   end
 
   add_index "mantenimientos", ["autobus_id"], name: "index_mantenimientos_on_autobus_id", using: :btree
+
+  create_table "precio_boletos", force: true do |t|
+    t.decimal  "precio",     precision: 10, scale: 0
+    t.string   "clase"
+    t.string   "destino"
+    t.string   "origen"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "terminals", force: true do |t|
+    t.string   "codigo"
+    t.string   "telefono"
+    t.string   "direccion"
+    t.boolean  "is_active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

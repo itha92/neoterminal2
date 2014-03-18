@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  identidad: MyString
+  fecha_nacimiento: 2014-03-18
+  asiento_id: 
+  boleto_id: 
+
+two:
+  nombre: MyString
+  identidad: MyString
+  fecha_nacimiento: 2014-03-18
+  asiento_id: 
+  boleto_id: 
