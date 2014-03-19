@@ -37,13 +37,13 @@
 			<td><%= encomienda.fecha %></td>
 			<td><%= encomienda.terminal.codigo %></td>
 			<td><%= encomienda.precio_paquete.tipo_paquete %></td>
-			<td><%= link_to 'Show', encomienda %></td>
-			<td><%= link_to 'Edit', edit_encomienda_path(encomienda) %></td>
+			<td><%= link_to 'Mostrar', encomienda %></td>
+			<td><%= link_to 'Editar', edit_encomienda_path(encomienda) %></td>
 		</tr>
 		<% end %>
 	</tbody>
 	</table>
 </div>
 <div class="row">
-	<%= link_to 'New Encomienda', new_encomienda_path, class:"button" %>
+	<%= link_to 'Nueva Encomienda', new_encomienda_path, class:"button" %>
 </div>

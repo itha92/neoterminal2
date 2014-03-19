@@ -20,12 +20,12 @@
 			<td><%= destino.id %></td>
 			<td><%= destino.nombre %></td>
 			<td><%= destino.cod %></td>
-			<td><%= link_to 'Show', destino %></td>
-			<td><%= link_to 'Edit', edit_destino_path(destino) %></td>
-			<td><%= link_to 'Destroy', destino, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			<td><%= link_to 'Mostrar', destino %></td>
+			<td><%= link_to 'Editar', edit_destino_path(destino) %></td>
+			<td><%= link_to 'Eliminar', destino, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 			</tr>
 		<% end %>
 		</tbody>
 	</table>
-<%= link_to 'New Destino', new_destino_path, class:"button"%>
+<%= link_to 'Nuevo Destino', new_destino_path, class:"button"%>
 </div>
