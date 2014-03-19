@@ -1,19 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>NeoTerminal 2.0</title>
+	<title>NeoTerminal 2.0</title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= csrf_meta_tags %>
-  </head>
+	<%= stylesheet_link_tag	 "application" %>
+	<%= javascript_include_tag "vendor/modernizr" %>
+	<%= csrf_meta_tags %>
+</head>
 
   <body>
+	<nav class="top-bar" data-topbar>
+		<ul class="title-area">
+			<li class="name">
+			<h1><%=link_to "Home",controller: "home"%></h1>
+			</li>
+			<li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+		</ul>
 
-    <%= yield %>
-    <%= javascript_include_tag "application" %>
-  </body>
+		<section class="top-bar-section">
+		<!-- Right Nav Section -->
+		<ul class="right">
+			<li class="active"><%= link_to "Pasajeros",controller: "pasajeros" %></li>
+			<li class="has-dropdown">
+			<a href="#">Administracion</a>
+		<ul class="dropdown">
+			<li><%= link_to "Empleados", controller: "empleados" %></li>
+			<li><%= link_to "Autobuses", controller: "autobuses"%></li>
+			<li><%= link_to "Mantenimientos", controller: "mantenimientos" %></li>
+			<li><%= link_to "Asientos", controller: "asientos"%></li>
+			<li><%= link_to "Itinerarios", controller: "itinerarios"%></li>
+			<li><%= link_to "Terminales", controller: "terminals"%></li>
+			<li><%= link_to "Precios de Boletos", controller: "precio_boletos" %></li>
+			<li><%= link_to "Precios de Paquetes", controller: "precio_paquetes" %></li>
+		</ul>
+		</li>
+		</ul>
+
+		<!-- Left Nav Section -->
+		<ul class="left">
+		<li><%= link_to "Boletos",controller: "boletos" %></li>
+		<li><%= link_to "Encomiendas",controller: "encomiendas" %></li>
+		</ul>
+	</section>
+</nav>
+	<%= yield %>
+	<%= javascript_include_tag "application" %>
+	</body>
 </html>
