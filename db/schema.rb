@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140318234401) do
+ActiveRecord::Schema.define(version: 20140319002927) do
 
   create_table "asientos", force: true do |t|
     t.string   "asiento_no"
@@ -47,6 +47,13 @@ ActiveRecord::Schema.define(version: 20140318234401) do
 
   add_index "boletos", ["precio_boletos_id"], name: "index_boletos_on_precio_boletos_id", using: :btree
   add_index "boletos", ["terminal_id"], name: "index_boletos_on_terminal_id", using: :btree
+
+  create_table "destinos", force: true do |t|
+    t.string   "nombre"
+    t.string   "cod"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "empleados", force: true do |t|
     t.string   "identidad"

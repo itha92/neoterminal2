@@ -1,33 +1,36 @@
-<%= form_for(@precio_boleto) do |f| %>
-  <% if @precio_boleto.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@precio_boleto.errors.count, "error") %> prohibited this precio_boleto from being saved:</h2>
+<div class="row">
+		
+	<%= form_for(@precio_boleto) do |f| %>
+		<% if @precio_boleto.errors.any? %>
+			<div id="error_explanation">
+				<h2><%= pluralize(@precio_boleto.errors.count, "error") %> prohibited this precio_boleto from being saved:</h2>
 
-      <ul>
-      <% @precio_boleto.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+				<ul>
+				<% @precio_boleto.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+				</ul>
+			</div>
+		<% end %>
 
-  <div class="field">
-    <%= f.label :precio %><br>
-    <%= f.text_field :precio %>
-  </div>
-  <div class="field">
-    <%= f.label :clase %><br>
-    <%= f.text_field :clase %>
-  </div>
-  <div class="field">
-    <%= f.label :destino %><br>
-    <%= f.text_field :destino %>
-  </div>
-  <div class="field">
-    <%= f.label :origen %><br>
-    <%= f.text_field :origen %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+		<div class="field">
+			<%= f.label :precio %><br>
+			<%= f.text_field :precio %>
+		</div>
+		<div class="field">
+			<%= f.label :clase %><br>
+			<%= f.text_field :clase %>
+		</div>
+		<div class="field">
+			<%= f.label :destino %><br>
+			<%= collection_select(:precio_boleto, :destino, @lugares, :cod, :nombre) %>
+		</div>
+		<div class="field">
+			<%= f.label :origen %><br>
+			<%= collection_select(:precio_boleto, :origen, @lugares, :cod, :nombre) %>
+		</div>
+		<div class="actions">
+			<%= f.submit %>
+		</div>
+	<% end %>
+</div>

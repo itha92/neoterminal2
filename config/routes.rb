@@ -1,4 +1,6 @@
 Neoterminal2::Application.routes.draw do
+  resources :destinos
+
   resources :pasajeros
 
   resources :encomiendas

@@ -15,10 +15,12 @@ class PrecioBoletosController < ApplicationController
   # GET /precio_boletos/new
   def new
     @precio_boleto = PrecioBoleto.new
+    @lugares = Destino.all
   end
 
   # GET /precio_boletos/1/edit
   def edit
+    @lugares = Destino.all
   end
 
   # POST /precio_boletos
@@ -28,7 +30,7 @@ class PrecioBoletosController < ApplicationController
 
     respond_to do |format|
       if @precio_boleto.save
-        format.html { redirect_to @precio_boleto, notice: 'Precio boleto was successfully created.' }
+        format.html { redirect_to @precio_boleto, notice: 'Nuevo Precio de boleto fue creado exitosamente.' }
         format.json { render action: 'show', status: :created, location: @precio_boleto }
       else
         format.html { render action: 'new' }
