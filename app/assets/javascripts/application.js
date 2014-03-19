@@ -79,3 +79,12 @@ $('.button').css('color','#fff');
 $('.imprimir').on('click',function(){
 	window.print();
 });
+
+$('.actions input').addClass('button');
+
+//$('.top-bar').css('background', '#fba400');
+
+
+
+//$('.top-bar-section li:not(.has-form) a:not(.button)').css('background', '#fba400');
+//$('ul.left li a').css('background', '#fba400');

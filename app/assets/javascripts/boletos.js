@@ -1,0 +1,1 @@
+$('.actions input').addClass('button');
