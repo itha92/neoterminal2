@@ -1,61 +1,91 @@
 <%= form_for(@encomienda) do |f| %>
-  <% if @encomienda.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@encomienda.errors.count, "error") %> prohibited this encomienda from being saved:</h2>
+		<% if @encomienda.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@encomienda.errors.count, "error") %> prohibited this encomienda from being saved:</h2>
 
-      <ul>
-      <% @encomienda.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :destinatario %><br>
-    <%= f.text_field :destinatario %>
-  </div>
-  <div class="field">
-    <%= f.label :remitente %><br>
-    <%= f.text_field :remitente %>
-  </div>
-  <div class="field">
-    <%= f.label :peso %><br>
-    <%= f.text_field :peso %>
-  </div>
-  <div class="field">
-    <%= f.label :destino %><br>
-    <%= f.text_field :destino %>
-  </div>
-  <div class="field">
-    <%= f.label :origen %><br>
-    <%= f.text_field :origen %>
-  </div>
-  <div class="field">
-    <%= f.label :is_delivered %><br>
-    <%= f.check_box :is_delivered %>
-  </div>
-  <div class="field">
-    <%= f.label :is_shipped %><br>
-    <%= f.check_box :is_shipped %>
-  </div>
-  <div class="field">
-    <%= f.label :is_onhold %><br>
-    <%= f.check_box :is_onhold %>
-  </div>
-  <div class="field">
-    <%= f.label :fecha %><br>
-    <%= f.date_select :fecha %>
-  </div>
-  <div class="field">
-    <%= f.label :terminal_id %><br>
-    <%= collection_select(:encomienda, :terminal_id, @terminales, :id, :codigo) %>
-  </div>
-  <div class="field">
-    <%= f.label :precio_paquete_id %><br>
-    <%= collection_select(:encomienda, :precio_paquete_id, @precios, :id, :tipo_paquete) %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+			<ul>
+			<% @encomienda.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+			<% end %>
+			</ul>
+		</div>
+		<% end %>
+	<div class="row">
+		
+		<div class="large-6 columns">
+			<div class="field">
+				<%= f.label :destinatario %><br>
+				<%= f.text_field :destinatario %>
+			</div>
+		</div>
+		<div class="large-6 columns">
+			<div class="field">
+				<%= f.label :remitente %><br>
+				<%= f.text_field :remitente %>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="large-2 columns">
+			<div class="field">
+				<%= f.label :peso %><br>
+				<%= f.text_field :peso %>
+			</div>
+		</div>
+		<div class="large-5 columns">
+			<div class="field">
+				<%= f.label :destino %><br>
+				<%= f.text_field :destino %>
+			</div>
+		</div>
+		<div class="large-5 columns">
+			<div class="field">
+				<%= f.label :origen %><br>
+				<%= f.text_field :origen %>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		
+		<div class="large-2 columns">
+			<div class="field">
+				<%= f.label :is_delivered %><br>
+				<%= f.check_box :is_delivered %>
+			</div>
+		</div>
+		<div class="large-2 columns">
+			<div class="field">
+				<%= f.label :is_shipped %><br>
+				<%= f.check_box :is_shipped %>
+			</div>
+		</div>
+		<div class="large-2 columns">
+			<div class="field">
+				<%= f.label :is_onhold %><br>
+				<%= f.check_box :is_onhold %>
+			</div>
+		</div>
+		<div class="large-2 columns">
+			<div class="field">
+				<%= f.label :fecha %><br>
+				<%= f.date_select :fecha %>
+			</div>
+		</div>
+		<div class="large-4 columns">
+			<div class="field">
+				<%= f.label :terminal_id %><br>
+				<%= collection_select(:encomienda, :terminal_id, @terminales, :id, :codigo) %>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		
+		<div class="field">
+			<%= f.label :precio_paquete_id %><br>
+			<%= collection_select(:encomienda, :precio_paquete_id, @precios, :id, :tipo_paquete) %>
+		</div>
+		<div class="actions">
+			<%= f.submit %>
+		</div>
+	</div>
 <% end %>

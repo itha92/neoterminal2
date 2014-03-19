@@ -1,45 +1,47 @@
-<h1>Listing empleados</h1>
+<div class="row">
+	<h1>Lista de Empleados</h1>
+</div>
+<div class="row">
+	<table>
+		<thead>
+		<tr>
+			<th>Identidad</th>
+			<th>Nombre</th>
+			<th>Direccion</th>
+			<th>Telefono</th>
+			<th>Fecha nacimiento</th>
+			<th>Puesto</th>
+			<th>Is active</th>
+			<th>Tiene bus</th>
+			<th>Terminal</th>
+			<th>Autobus</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+		</thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Identidad</th>
-      <th>Nombre</th>
-      <th>Direccion</th>
-      <th>Telefono</th>
-      <th>Fecha nacimiento</th>
-      <th>Puesto</th>
-      <th>Is active</th>
-      <th>Tiene bus</th>
-      <th>Terminal</th>
-      <th>Autobus</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @empleados.each do |empleado| %>
-      <tr>
-        <td><%= empleado.identidad %></td>
-        <td><%= empleado.nombre %></td>
-        <td><%= empleado.direccion %></td>
-        <td><%= empleado.telefono %></td>
-        <td><%= empleado.fecha_nacimiento %></td>
-        <td><%= empleado.puesto %></td>
-        <td><%= empleado.is_active %></td>
-        <td><%= empleado.tiene_bus %></td>
-        <td><%= empleado.terminal %></td>
-        <td><%= empleado.autobus %></td>
-        <td><%= link_to 'Show', empleado %></td>
-        <td><%= link_to 'Edit', edit_empleado_path(empleado) %></td>
-        <td><%= link_to 'Destroy', empleado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Empleado', new_empleado_path %>
+		<tbody>
+		<% @empleados.each do |empleado| %>
+			<tr>
+			<td><%= empleado.identidad %></td>
+			<td><%= empleado.nombre %></td>
+			<td><%= empleado.direccion %></td>
+			<td><%= empleado.telefono %></td>
+			<td><%= empleado.fecha_nacimiento %></td>
+			<td><%= empleado.puesto %></td>
+			<td><%= empleado.is_active %></td>
+			<td><%= empleado.tiene_bus %></td>
+			<td><%= empleado.terminal %></td>
+			<td><%= empleado.autobus %></td>
+			<td><%= link_to 'Show', empleado %></td>
+			<td><%= link_to 'Edit', edit_empleado_path(empleado) %></td>
+			<td><%= link_to 'Destroy', empleado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+</div>
+<div class="row">
+	<%= link_to 'New Empleado', new_empleado_path, class:"button" %>
+</div>

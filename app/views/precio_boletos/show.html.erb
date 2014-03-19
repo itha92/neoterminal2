@@ -1,3 +1,5 @@
+<div class="row">
+	
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -20,5 +22,8 @@
   <%= @precio_boleto.origen %>
 </p>
 
-<%= link_to 'Edit', edit_precio_boleto_path(@precio_boleto) %> |
-<%= link_to 'Back', precio_boletos_path %>
+</div>
+<div class="row">
+	<%= link_to 'Edit', edit_precio_boleto_path(@precio_boleto), class:"button" %>
+	<%= link_to 'Back', precio_boletos_path, class:"button" %>
+</div>

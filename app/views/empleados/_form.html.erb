@@ -10,7 +10,8 @@
       </ul>
     </div>
   <% end %>
-
+<div class="row">
+  
   <div class="field">
     <%= f.label :identidad %><br>
     <%= f.text_field :identidad %>
@@ -29,7 +30,7 @@
   </div>
   <div class="field">
     <%= f.label :fecha_nacimiento %><br>
-    <%= f.date_select :fecha_nacimiento %>
+    <%= f.date_select :fecha_nacimiento,start_year: 1910 %>
   </div>
   <div class="field">
     <%= f.label :puesto %><br>
@@ -54,4 +55,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
 <% end %>

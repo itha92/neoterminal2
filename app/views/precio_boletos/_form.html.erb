@@ -19,7 +19,7 @@
 		</div>
 		<div class="field">
 			<%= f.label :clase %><br>
-			<%= f.text_field :clase %>
+			<%= f.select :clase, [['Turista','Turista'],['Ejecutiva','Ejecutiva'],['Economica','Economica']] %>
 		</div>
 		<div class="field">
 			<%= f.label :destino %><br>
