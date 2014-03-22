@@ -12,17 +12,23 @@
 		</ul>
 		</div>
 	<% end %>
-
-	<div class="field">
-		<%= f.label :nombre %><br>
-		<%= f.text_field :nombre %>
+	
+	<div class="large-5 columns">
+		<div class="field">
+			<%= f.label :nombre %><br>
+			<%= f.text_field :nombre %>
+		</div>
 	</div>
-	<div class="field">
-		<%= f.label :cod %><br>
-		<%= f.text_field :cod %>
+	<div class="large-5 columns">
+		<div class="field">
+			<%= f.label :cod %><br>
+			<%= f.text_field :cod %>
+		</div>
 	</div>
-	<div class="actions">
-		<%= f.submit %>
+	<div class="large-2 columns">
+		<div class="actions">
+			<%= f.submit %>
+		</div>
 	</div>
 	<% end %>
 </div>

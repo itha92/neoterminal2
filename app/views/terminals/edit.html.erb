@@ -1,6 +1,10 @@
-<h1>Editing terminal</h1>
+<div class="row">
+	<h1>Modificando terminal</h1>
+</div>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @terminal %> |
-<%= link_to 'Back', terminals_path %>
+<div class="row">
+	<%= link_to 'Show', @terminal, class:"button" %>
+	<%= link_to 'Back', terminals_path, class:"button" %>
+</div>

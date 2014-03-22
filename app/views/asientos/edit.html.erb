@@ -1,6 +1,10 @@
-<h1>Editing asiento</h1>
+<div class="row">
+	<h1>Modificando asiento</h1>
+</div>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @asiento %> |
-<%= link_to 'Back', asientos_path %>
+<div class="row">
+	
+	<%= link_to 'Mostrar', @asiento, class:"button" %>
+	<%= link_to 'Atras', asientos_path, class:"button" %>
+</div>

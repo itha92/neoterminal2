@@ -1,3 +1,5 @@
+<div class="row">
+	
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -20,5 +22,6 @@
   <%= @asiento.autobus.codigo %>
 </p>
 
-<%= link_to 'Edit', edit_asiento_path(@asiento) %> |
-<%= link_to 'Back', asientos_path %>
+<%= link_to 'Edit', edit_asiento_path(@asiento), class:"button" %>
+<%= link_to 'Back', asientos_path , class:"button"%>
+</div>
