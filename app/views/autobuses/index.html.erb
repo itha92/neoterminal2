@@ -24,9 +24,9 @@
 		<td><%= autobus.modelo %></td>
 		<td><%= autobus.capacidad %></td>
 		<td><%= autobus.is_active %></td>
-		<td><%= link_to 'Show', autobus,class:"button" %></td>
-		<td><%= link_to 'Edit', edit_autobus_path(autobus), class:"button" %></td>
-		<td><%= link_to 'Destroy', autobus, method: :delete, data: { confirm: 'Are you sure?' },class:"button" %></td>
+		<td><%= link_to 'Mostrar', autobus%></td>
+		<td><%= link_to 'Editar', edit_autobus_path(autobus)%></td>
+		<td><%= link_to 'Eliminar', autobus, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
 		</tr>
 	<% end %>
 	</tbody>

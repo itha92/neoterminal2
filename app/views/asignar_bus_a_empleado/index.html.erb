@@ -1,0 +1,20 @@
+<div class="row">
+	<div class="large-12 columns">
+		<h1>Asignar bus a empleado</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="panel">
+		<h3>Conductores Disponibles</h3>
+		<%= collection_select(:empleado, :autobus_id, @empleados, :id, :nombre) %>
+	</div>
+
+	<div class="panel">
+		<h3>Autobuses Disponibles</h3>
+		<%= collection_select(:empleado, :autobus_id, @buses, :id, :codigo) %>
+	</div>
+	
+	<div class="panel">
+		<%= button_to "Asignar", action: "asignar" %>
+	</div>
+</div>

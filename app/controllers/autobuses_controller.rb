@@ -27,6 +27,7 @@ class AutobusesController < ApplicationController
     @autobus = Autobus.new(autobus_params)
 
     respond_to do |format|
+      @autobus.is_taken = false
       if @autobus.save
         format.html { redirect_to @autobus, notice: 'Autobus was successfully created.' }
         format.json { render action: 'show', status: :created, location: @autobus }

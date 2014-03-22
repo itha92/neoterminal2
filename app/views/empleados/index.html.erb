@@ -14,7 +14,6 @@
 			<th>Is active</th>
 			<th>Tiene bus</th>
 			<th>Terminal</th>
-			<th>Autobus</th>
 			<th></th>
 			<th></th>
 			<th></th>
@@ -33,7 +32,6 @@
 			<td><%= empleado.is_active %></td>
 			<td><%= empleado.tiene_bus %></td>
 			<td><%= empleado.terminal.codigo %></td>
-			<td><%= empleado.autobus.codigo %></td>
 			<td><%= link_to 'Mostrar', empleado %></td>
 			<td><%= link_to 'Modificar', edit_empleado_path(empleado) %></td>
 			<td><%= link_to 'Eliminar', empleado, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
