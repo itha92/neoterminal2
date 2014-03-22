@@ -1,6 +1,10 @@
-<h1>Editing precio_paquete</h1>
+<div class="row">
+	<h1>Modificando Precio de Paquete</h1>
+</div>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @precio_paquete %> |
-<%= link_to 'Back', precio_paquetes_path %>
+<div class="row">
+	<%= link_to 'Mostrar', @precio_paquete, class:"button" %>
+	<%= link_to 'Atras', precio_paquetes_path, class:"button" %>
+</div>

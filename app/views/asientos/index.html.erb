@@ -24,9 +24,9 @@
 			<td><%= asiento.tipo %></td>
 			<td><%= asiento.is_active %></td>
 			<td><%= asiento.autobus.codigo %></td>
-			<td><%= link_to 'Show', asiento %></td>
-			<td><%= link_to 'Edit', edit_asiento_path(asiento) %></td>
-			<td><%= link_to 'Destroy', asiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			<td><%= link_to 'Mostrar', asiento %></td>
+			<td><%= link_to 'Editar', edit_asiento_path(asiento) %></td>
+			<td><%= link_to 'Eliminar', asiento, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
 		</tr>
 		<% end %>
 	</tbody>
@@ -35,6 +35,6 @@
 </div>
 
 <div class="row">
-	<%= link_to 'New Asiento', new_asiento_path %>
+	<%= link_to 'Nuevo Asiento', new_asiento_path, class:"button" %>
 </div>
 

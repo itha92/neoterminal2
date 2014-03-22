@@ -1,6 +1,9 @@
-<h1>Editing empleado</h1>
+<div class="row">
+	<h1>Editing empleado</h1>
+</div>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @empleado %> |
-<%= link_to 'Back', empleados_path %>
+<div class="row">
+	<%= link_to 'Show', @empleado, class:"button" %>
+	<%= link_to 'Back', empleados_path, class:"button" %>
+</div>

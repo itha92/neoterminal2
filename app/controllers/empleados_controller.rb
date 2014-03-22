@@ -15,10 +15,14 @@ class EmpleadosController < ApplicationController
   # GET /empleados/new
   def new
     @empleado = Empleado.new
+    @terminales = Terminal.all
+    @autobuses = Autobus.all
   end
 
   # GET /empleados/1/edit
   def edit
+    @terminales = Terminal.all
+    @autobuses = Autobus.all
   end
 
   # POST /empleados

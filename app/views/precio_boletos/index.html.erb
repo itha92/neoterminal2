@@ -22,14 +22,14 @@
 			<td><%= precio_boleto.clase %></td>
 			<td><%= precio_boleto.destino %></td>
 			<td><%= precio_boleto.origen %></td>
-			<td><%= link_to 'Show', precio_boleto %></td>
-			<td><%= link_to 'Edit', edit_precio_boleto_path(precio_boleto) %></td>
-			<td><%= link_to 'Destroy', precio_boleto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			<td><%= link_to 'Mostrar', precio_boleto %></td>
+			<td><%= link_to 'Editar', edit_precio_boleto_path(precio_boleto) %></td>
+			<td><%= link_to 'Eliminar', precio_boleto, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
 			</tr>
 		<% end %>
 		</tbody>
 	</table>
 </div>
 <div class="row">
-	<%= link_to 'New Precio boleto', new_precio_boleto_path, class:"button" %>
+	<%= link_to 'Nuevo Precio boleto', new_precio_boleto_path, class:"button" %>
 </div>

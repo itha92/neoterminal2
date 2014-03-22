@@ -1,4 +1,3 @@
-<div class="row">
 		
 	<%= form_for(@precio_boleto) do |f| %>
 		<% if @precio_boleto.errors.any? %>
@@ -12,25 +11,36 @@
 				</ul>
 			</div>
 		<% end %>
-
+<div class="row">
+	<div class="large-6 columns">
 		<div class="field">
 			<%= f.label :precio %><br>
 			<%= f.text_field :precio %>
 		</div>
+	</div>
+	<div class="large-6 columns">
 		<div class="field">
 			<%= f.label :clase %><br>
 			<%= f.select :clase, [['Turista','Turista'],['Ejecutiva','Ejecutiva'],['Economica','Economica']] %>
 		</div>
+	</div>
+<div class="row">
+	<div class="large-5 columns">
 		<div class="field">
 			<%= f.label :destino %><br>
 			<%= collection_select(:precio_boleto, :destino, @lugares, :cod, :nombre) %>
 		</div>
+	</div>
+	<div class="large-5 columns">
 		<div class="field">
 			<%= f.label :origen %><br>
 			<%= collection_select(:precio_boleto, :origen, @lugares, :cod, :nombre) %>
 		</div>
+	</div>
+	<div class="large-2 columns">
 		<div class="actions">
 			<%= f.submit %>
 		</div>
-	<% end %>
+	</div>
 </div>
+	<% end %>

@@ -1,54 +1,57 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+	
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Identidad:</strong>
-  <%= @empleado.identidad %>
-</p>
+	<p>
+	<strong>Identidad:</strong>
+	<%= @empleado.identidad %>
+	</p>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @empleado.nombre %>
-</p>
+	<p>
+	<strong>Nombre:</strong>
+	<%= @empleado.nombre %>
+	</p>
 
-<p>
-  <strong>Direccion:</strong>
-  <%= @empleado.direccion %>
-</p>
+	<p>
+	<strong>Direccion:</strong>
+	<%= @empleado.direccion %>
+	</p>
 
-<p>
-  <strong>Telefono:</strong>
-  <%= @empleado.telefono %>
-</p>
+	<p>
+	<strong>Telefono:</strong>
+	<%= @empleado.telefono %>
+	</p>
 
-<p>
-  <strong>Fecha nacimiento:</strong>
-  <%= @empleado.fecha_nacimiento %>
-</p>
+	<p>
+	<strong>Fecha nacimiento:</strong>
+	<%= @empleado.fecha_nacimiento %>
+	</p>
 
-<p>
-  <strong>Puesto:</strong>
-  <%= @empleado.puesto %>
-</p>
+	<p>
+	<strong>Puesto:</strong>
+	<%= @empleado.puesto %>
+	</p>
 
-<p>
-  <strong>Is active:</strong>
-  <%= @empleado.is_active %>
-</p>
+	<p>
+	<strong>Is active:</strong>
+	<%= @empleado.is_active %>
+	</p>
 
-<p>
-  <strong>Tiene bus:</strong>
-  <%= @empleado.tiene_bus %>
-</p>
+	<p>
+	<strong>Tiene bus:</strong>
+	<%= @empleado.tiene_bus %>
+	</p>
 
-<p>
-  <strong>Terminal:</strong>
-  <%= @empleado.terminal %>
-</p>
+	<p>
+	<strong>Terminal:</strong>
+	<%= @empleado.terminal.codigo %>
+	</p>
 
-<p>
-  <strong>Autobus:</strong>
-  <%= @empleado.autobus %>
-</p>
+	<p>
+	<strong>Autobus:</strong>
+	<%= @empleado.autobus.codigo %>
+	</p>
 
-<%= link_to 'Edit', edit_empleado_path(@empleado) %> |
-<%= link_to 'Back', empleados_path %>
+	<%= link_to 'Edit', edit_empleado_path(@empleado), class:"button" %>
+	<%= link_to 'Back', empleados_path , class:"button" %>
+</div>
