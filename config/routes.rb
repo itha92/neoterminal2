@@ -25,6 +25,8 @@ Neoterminal2::Application.routes.draw do
 
   get 'asignar_bus_a_empleado/asign' => 'asignar_bus_a_empleado#asignar'
 
+  post 'boletos/get_total' => 'boletos#get_total'
+
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

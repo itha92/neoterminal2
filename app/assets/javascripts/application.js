@@ -19,3 +19,14 @@
 $(function(){ $(document).foundation(); });
 
 
+$(document).ready(function () {
+	
+	$('#boleto_precio_boletos_id').change(function(){
+		var data = {};
+		data.id_boleto = $('#boleto_precio_boletos_id').val();
+		$.post('/boletos/get_total', data).success(function(data){
+			$('#boleto_subtotal').val(data);
+		});
+	});
+
+});

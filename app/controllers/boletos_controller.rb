@@ -1,6 +1,12 @@
 class BoletosController < ApplicationController
   before_action :set_boleto, only: [:show, :edit, :update, :destroy]
 
+  def get_total
+    precio = PrecioBoleto.find(params[:id_boleto])
+    respond_to do |format|
+      format.json { render :json => precio.precio }
+    end
+  end
   # GET /boletos
   # GET /boletos.json
   def index
