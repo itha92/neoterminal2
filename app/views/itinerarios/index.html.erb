@@ -1,35 +1,38 @@
-<h1>Listing itinerarios</h1>
+<div class="row">
+	
+<h1>Itinerarios</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Hora salida</th>
-      <th>Destino</th>
-      <th>Origen</th>
-      <th>Fecha</th>
-      <th>Terminal</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+	<thead>
+	<tr>
+		<th>Hora salida</th>
+		<th>Destino</th>
+		<th>Origen</th>
+		<th>Fecha</th>
+		<th>Terminal</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+	</thead>
 
-  <tbody>
-    <% @itinerarios.each do |itinerario| %>
-      <tr>
-        <td><%= itinerario.hora_salida %></td>
-        <td><%= itinerario.destino %></td>
-        <td><%= itinerario.origen %></td>
-        <td><%= itinerario.fecha %></td>
-        <td><%= itinerario.terminal.codigo %></td>
-        <td><%= link_to 'Show', itinerario %></td>
-        <td><%= link_to 'Edit', edit_itinerario_path(itinerario) %></td>
-        <td><%= link_to 'Destroy', itinerario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+	<tbody>
+	<% @itinerarios.each do |itinerario| %>
+		<tr>
+		<td><%= itinerario.hora_salida %></td>
+		<td><%= itinerario.destino %></td>
+		<td><%= itinerario.origen %></td>
+		<td><%= itinerario.fecha %></td>
+		<td><%= itinerario.terminal.codigo %></td>
+		<td><%= link_to 'Mostrar', itinerario %></td>
+		<td><%= link_to 'Editar', edit_itinerario_path(itinerario) %></td>
+		<td><%= link_to 'Eliminar', itinerario, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+		</tr>
+	<% end %>
+	</tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Itinerario', new_itinerario_path %>
+<%= link_to 'New Itinerario', new_itinerario_path , class:"button"%>
+</div>

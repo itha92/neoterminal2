@@ -17,11 +17,13 @@ class BoletosController < ApplicationController
     @boleto = Boleto.new
     @terminales = Terminal.all
     @boletos = PrecioBoleto.all
+    @itinerarios = Itinerario.all
   end
 
   # GET /boletos/1/edit
   def edit
     @terminales = Terminal.all
+    @itinerarios = Itinerario.all
     @boletos = PrecioBoleto.all
   end
 

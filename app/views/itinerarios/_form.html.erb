@@ -10,28 +10,41 @@
 			</ul>
 		</div>
 	<% end %>
-
-	<div class="field">
-		<%= f.label :hora_salida %><br>
-		<%= f.time_select :hora_salida %>
+<div class="row">
+	<div class="large-2 columns">
+		<div class="field">
+			<%= f.label :hora_salida %>
+			<%= f.time_select :hora_salida %>
+		</div>
 	</div>
-	<div class="field">
-		<%= f.label :destino %><br>
-		<%= f.text_field :destino %>
+	<div class="large-2 columns">
+		<div class="field">
+			<%= f.label :destino %>
+			<%= collection_select(:itinerario, :destino, @destinos, :id, :cod) %>
+		</div>
 	</div>
-	<div class="field">
-		<%= f.label :origen %><br>
-		<%= f.text_field :origen %>
+	<div class="large-2 columns">
+		<div class="field">
+			<%= f.label :origen %>
+			<%= collection_select(:itinerario, :origen, @destinos, :id, :cod) %>
+		</div>
 	</div>
-	<div class="field">
-		<%= f.label :fecha %><br>
-		<%= f.date_select :fecha %>
+	<div class="large-2 columns">
+		<div class="field">
+			<%= f.label :fecha %>
+			<%= f.date_select :fecha %>
+		</div>
 	</div>
-	<div class="field">
-		<%= f.label :terminal_id %><br>
-		<%= collection_select(:itinerario, :terminal_id, @terminales, :id, :codigo) %>
+	<div class="large-2 columns">
+		<div class="field">
+			<%= f.label :terminal_id %>
+			<%= collection_select(:itinerario, :terminal_id, @terminales, :id, :codigo) %>
+		</div>
 	</div>
-	<div class="actions">
-		<%= f.submit %>
+	<div class="large-2 columns">
+		<div class="actions">
+			<%= f.submit %>
+		</div>
 	</div>
+</div>
 <% end %>

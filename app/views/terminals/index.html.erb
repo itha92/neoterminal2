@@ -1,33 +1,37 @@
 <div class="row">
-  
+	
 <h1>Terminales</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Codigo</th>
-      <th>Telefono</th>
-      <th>Direccion</th>
-      <th>Is active</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+	<thead>
+	<tr>
+		<th>Codigo</th>
+		<th>Telefono</th>
+		<th>Direccion</th>
+		<th>Estado</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+	</thead>
 
-  <tbody>
-    <% @terminals.each do |terminal| %>
-      <tr>
-        <td><%= terminal.codigo %></td>
-        <td><%= terminal.telefono %></td>
-        <td><%= terminal.direccion %></td>
-        <td><%= terminal.is_active %></td>
-        <td><%= link_to 'Mostrar', terminal %></td>
-        <td><%= link_to 'Editar', edit_terminal_path(terminal) %></td>
-        <td><%= link_to 'Eliminar', terminal, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+	<tbody>
+	<% @terminals.each do |terminal| %>
+		<tr>
+		<td><%= terminal.codigo %></td>
+		<td><%= terminal.telefono %></td>
+		<td><%= terminal.direccion %></td>
+		<% if terminal.is_active %>
+			<td>Activo</td>
+		<% else %>
+			<td>No Activo</td>
+		<% end %>
+		<td><%= link_to 'Mostrar', terminal %></td>
+		<td><%= link_to 'Editar', edit_terminal_path(terminal) %></td>
+		<td><%= link_to 'Eliminar', terminal, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+		</tr>
+	<% end %>
+	</tbody>
 </table>
 <%= link_to 'New Terminal', new_terminal_path, class:"button"%>
 </div>
