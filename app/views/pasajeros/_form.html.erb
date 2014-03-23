@@ -1,37 +1,52 @@
 <%= form_for(@pasajero) do |f| %>
-  <% if @pasajero.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@pasajero.errors.count, "error") %> prohibited this pasajero from being saved:</h2>
+	<% if @pasajero.errors.any? %>
+	<div id="error_explanation">
+		<h2><%= pluralize(@pasajero.errors.count, "error") %> prohibited this pasajero from being saved:</h2>
 
-      <ul>
-      <% @pasajero.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
-  </div>
-  <div class="field">
-    <%= f.label :identidad %><br>
-    <%= f.text_field :identidad %>
-  </div>
-  <div class="field">
-    <%= f.label :fecha_nacimiento %><br>
-    <%= f.date_select :fecha_nacimiento %>
-  </div>
-  <div class="field">
-    <%= f.label :asiento_id %><br>
-    <%= f.text_field :asiento_id %>
-  </div>
-  <div class="field">
-    <%= f.label :boleto_id %><br>
-    <%= f.text_field :boleto_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+		<ul>
+		<% @pasajero.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+		<% end %>
+		</ul>
+	</div>
+	<% end %>
+<div class="row">
+	
+	<div class="large-3 columns">
+		<div class="field">
+			<%= f.label :nombre %><br>
+			<%= f.text_field :nombre %>
+		</div>
+	</div>
+	<div class="large-3 columns">
+		<div class="field">
+			<%= f.label :identidad %><br>
+			<%= f.text_field :identidad %>
+		</div>
+	</div>
+	<div class="large-2 columns">
+		<div class="field">
+			<%= f.label :fecha_nacimiento %><br>
+			<%= f.date_select :fecha_nacimiento %>
+		</div>
+	</div>
+	<div class="large-2 columns">
+		<div class="field">
+			<%= f.label :asiento_id %><br>
+			<%= f.text_field :asiento_id %>
+		</div>
+	<div class="large-2 columns">
+		<div class="field">
+			<%= f.label :boleto_id %><br>
+			<%= f.text_field :boleto_id %>
+		</div>
+	</div>
+</div>
+	<div class="row">
+		
+		<div class="actions">
+			<%= f.submit %>
+		</div>
+		
+	</div>
 <% end %>

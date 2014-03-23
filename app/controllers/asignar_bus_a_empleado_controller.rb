@@ -5,6 +5,8 @@ class AsignarBusAEmpleadoController < ApplicationController
 	end
 
 	def asign
-		
+		@id_empleado = :id_empleado
+		@id_autobus = :id_autobus
+		@emp = Empleado.where(id_autobus)
 	end
 end

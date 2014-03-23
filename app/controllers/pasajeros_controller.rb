@@ -15,10 +15,12 @@ class PasajerosController < ApplicationController
   # GET /pasajeros/new
   def new
     @pasajero = Pasajero.new
+    @boletos = Boleto.all
   end
 
   # GET /pasajeros/1/edit
   def edit
+    @boletos = Boleto.all
   end
 
   # POST /pasajeros
