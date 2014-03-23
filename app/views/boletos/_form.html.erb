@@ -61,7 +61,7 @@
 		</div>
 		<div class="large-4 columns">
 			<div class="field">
-				<%= f.label :precio_boletos_id%>
+				<%= f.label :precio_boletos_id%><br>
 				<%= collection_select(:boleto, :precio_boletos_id, @boletos, :id, :origen_con_destino)%>
 			</div>
 		</div>

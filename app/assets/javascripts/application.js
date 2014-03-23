@@ -21,12 +21,28 @@ $(function(){ $(document).foundation(); });
 
 $(document).ready(function () {
 	
-	$('#boleto_precio_boletos_id').change(function(){
+	var poblar_sub_total = function(){
 		var data = {};
 		data.id_boleto = $('#boleto_precio_boletos_id').val();
 		$.post('/boletos/get_total', data).success(function(data){
 			$('#boleto_subtotal').val(data);
+			actualizar_total();
 		});
-	});
+	};
+
+	var actualizar_total = function(){
+		$('#boleto_total').val($('#boleto_subtotal').val() - $('#boleto_descuento').val());
+	};
+
+	$('#boleto_descuento').val(0);
+
+	$('#boleto_precio_boletos_id').change(poblar_sub_total);
+
+
+	$('#boleto_descuento').change(actualizar_total);
+
+	poblar_sub_total();
+	actualizar_total();
+
 
 });
