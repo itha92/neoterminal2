@@ -10,17 +10,20 @@
 			</div>
 		<% end %>
 
-	<div class="row">
-		<div class="large-6 columns">
-			<div class="field">
-				<%= f.label :identidad %>
-				<%= f.text_field :identidad %>
-			</div>
-		</div>
-		<div class="large-6 columns">
-			<div class="field">
-				<%= f.label :nombre %>
-				<%= f.text_field :nombre %>
+	<div class="panel">
+		<div class="row">
+			<h3>Pasajero</h3>
+				<div class="large-6 columns">
+					<div class="field">
+						<%= f.label :identidad %>
+						<%= f.text_field :identidad %>
+					</div>
+				</div>
+			<div class="large-6 columns">
+				<div class="field">
+					<%= f.label :nombre %>
+					<%= f.text_field :nombre %>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -73,6 +73,6 @@ class BoletosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def boleto_params
-      params.require(:boleto).permit(:fecha, :descuento, :subtotal, :total, :precio_boletos_id, :terminal_id)
+      params.require(:boleto).permit(:fecha, :descuento, :subtotal, :total, :precio_boletos_id, :terminal_id, :nombre, :identidad)
     end
 end

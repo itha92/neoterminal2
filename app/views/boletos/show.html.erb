@@ -1,8 +1,19 @@
+<div class="row">
+	
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Fecha:</strong>
   <%= @boleto.fecha %>
+</p>
+
+<p>
+	<strong>Identidad:</strong>
+	<%= @boleto.identidad%>
+</p>
+<p>
+	<strong>Nombre de Pasajero:</strong>
+	<%= @boleto.nombre%>
 </p>
 
 <p>
@@ -20,15 +31,18 @@
   <%= @boleto.total %>
 </p>
 
-<p>
-  <strong>Precio boletos:</strong>
-  <%= @boleto.precio_boletos %>
-</p>
+<%unless @boleto.precio_boletos_id.nil? %>
+  <p>
+	<strong>Precio boletos:</strong>
+	<%= @boleto.precio_boletos_id %>
+  </p>
+<%end%>
 
 <p>
   <strong>Terminal:</strong>
-  <%= @boleto.terminal %>
+  <%= @boleto.terminal.codigo %>
 </p>
 
-<%= link_to 'Edit', edit_boleto_path(@boleto) %> |
-<%= link_to 'Back', boletos_path %>
+<%= link_to 'Edit', edit_boleto_path(@boleto), class:"button" %>
+<%= link_to 'Back', boletos_path, class:"button" %>
+</div>

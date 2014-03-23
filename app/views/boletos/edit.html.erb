@@ -1,6 +1,11 @@
-<h1>Editing boleto</h1>
+<div class="row">
+	<h1>Modificando boleto</h1>
+	
+</div>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @boleto %> |
-<%= link_to 'Back', boletos_path %>
+<div class="row">
+	<%= link_to 'Show', @boleto, class:"button" %>
+	<%= link_to 'Back', boletos_path, class:"button" %>
+</div>
