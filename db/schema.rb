@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140322080930) do
+ActiveRecord::Schema.define(version: 20140323025613) do
 
   create_table "asientos", force: true do |t|
     t.string   "asiento_no"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20140322080930) do
     t.integer  "terminal_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "nombre"
+    t.string   "identidad"
   end
 
   add_index "boletos", ["precio_boletos_id"], name: "index_boletos_on_precio_boletos_id", using: :btree
@@ -116,19 +118,6 @@ ActiveRecord::Schema.define(version: 20140322080930) do
   end
 
   add_index "mantenimientos", ["autobus_id"], name: "index_mantenimientos_on_autobus_id", using: :btree
-
-  create_table "pasajeros", force: true do |t|
-    t.string   "nombre"
-    t.string   "identidad"
-    t.date     "fecha_nacimiento"
-    t.integer  "asiento_id"
-    t.integer  "boleto_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "pasajeros", ["asiento_id"], name: "index_pasajeros_on_asiento_id", using: :btree
-  add_index "pasajeros", ["boleto_id"], name: "index_pasajeros_on_boleto_id", using: :btree
 
   create_table "precio_boletos", force: true do |t|
     t.decimal  "precio",     precision: 10, scale: 0
