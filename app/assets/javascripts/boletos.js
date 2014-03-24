@@ -1,5 +1,5 @@
 
-$('#new_boleto').ready(function () {
+$('.boleto_form').ready(function () {
 	
 	$.each($('#boleto_itinerarios_id option'), function(index, el){
 		var tmp = $(el).text();
@@ -34,7 +34,7 @@ $('#new_boleto').ready(function () {
 	
 	$('.show_boletos span').text($('.show_boletos span').text().substring(11,16));
 
-	$('.new_boleto').submit(function () {
+	$('.boleto_form').submit(function () {
 
     // Get the Login Name value and trim it
     var id = $.trim($('#boleto_identidad').val());

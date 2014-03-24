@@ -14,19 +14,19 @@
 <div class="row">
 	<div class="large-4 columns">
 		<div class="field">
-			<%= f.label :asiento_no %><br>
+			<%= f.label :asiento_no %>
 			<%= f.text_field :asiento_no %>
 		</div>
 	</div>
 	<div class="large-4 columns">
 		<div class="field">
-			<%= f.label :tipo %><br>
-			<%= f.text_field :tipo %>
+			<%= f.label :tipo %>
+			<%= f.select :tipo, [['Ejecutiva','Ejecutiva'],['Turista','Turista'],['VIP','VIP']] %>
 		</div>
 	</div>
 	<div class="large-2 columns">
 		<div class="field">
-		<%= f.label :is_active %><br>
+		<%= f.label :is_active %>
 		<%= f.check_box :is_active %>
 		</div>
 	</div>

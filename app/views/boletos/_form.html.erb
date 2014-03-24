@@ -1,8 +1,8 @@
-	<%= form_for(@boleto) do |f| %>
+	<%= form_for(@boleto, :html => { :class => "boleto_form"} ) do |f| %>
 		<% if @boleto.errors.any? %>
 			<div id="error_explanation">
 				<h2><%= pluralize(@boleto.errors.count, "error") %> prohibited this boleto from being saved:</h2>
-				<ul>
+				<ul>	
 					<% @boleto.errors.full_messages.each do |msg| %>
 					<li><%= msg %></li>
 					<% end %>
