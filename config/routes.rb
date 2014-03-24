@@ -23,8 +23,6 @@ Neoterminal2::Application.routes.draw do
 
   resources :asignar_asientos
 
-  post 'asignar_asientos/asign' => 'asignar_asientos#asign'
-
   post 'boletos/get_total' => 'boletos#get_total'
 
   root 'home#index'
