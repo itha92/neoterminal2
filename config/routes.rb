@@ -23,7 +23,6 @@ Neoterminal2::Application.routes.draw do
 
   resources :asignar_bus_a_empleado
 
-
   post 'boletos/get_total' => 'boletos#get_total'
 
   root 'home#index'

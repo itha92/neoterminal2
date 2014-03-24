@@ -1,5 +1,5 @@
 <div class="row">
-	<h1>Listing mantenimientos</h1>
+	<h1>Mantenimientos</h1>
 </div>
 <div class="row">
 		
@@ -27,14 +27,14 @@
 			<td><%= mantenimiento.kilometraje %></td>
 			<td><%= mantenimiento.precio %></td>
 			<td><%= mantenimiento.autobus.codigo %></td>
-			<td><%= link_to 'Show', mantenimiento %></td>
-			<td><%= link_to 'Edit', edit_mantenimiento_path(mantenimiento) %></td>
-			<td><%= link_to 'Destroy', mantenimiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			<td><%= link_to 'Mostrar', mantenimiento %></td>
+			<td><%= link_to 'Editar', edit_mantenimiento_path(mantenimiento) %></td>
+			<td><%= link_to 'Eliminar', mantenimiento, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
 			</tr>
 		<% end %>
 		</tbody>
 	</table>
 </div>
 <div class="row">
-	<%= link_to 'New Mantenimiento', new_mantenimiento_path, class:"button" %>
+	<%= link_to 'Nuevo Mantenimiento', new_mantenimiento_path, class:"button" %>
 </div>

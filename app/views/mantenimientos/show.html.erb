@@ -1,29 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+	
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Fecha:</strong>
-  <%= @mantenimiento.fecha %>
-</p>
+	<p>
+		<strong>Fecha:</strong>
+		<%= @mantenimiento.fecha %>
+	</p>
 
-<p>
-  <strong>Observacion:</strong>
-  <%= @mantenimiento.observacion %>
-</p>
+	<p>
+		<strong>Observacion:</strong>
+		<%= @mantenimiento.observacion %>
+	</p>
 
-<p>
-  <strong>Kilometraje:</strong>
-  <%= @mantenimiento.kilometraje %>
-</p>
+	<p>
+		<strong>Kilometraje:</strong>
+		<%= @mantenimiento.kilometraje %>
+	</p>
 
-<p>
-  <strong>Precio:</strong>
-  <%= @mantenimiento.precio %>
-</p>
+	<p>
+		<strong>Precio:</strong>
+		<%= @mantenimiento.precio %>
+	</p>
 
-<p>
-  <strong>Autobus:</strong>
-  <%= @mantenimiento.autobus.codigo %>
-</p>
+	<p>
+		<strong>Autobus:</strong>
+		<%= @mantenimiento.autobus.codigo %>
+	</p>
 
-<%= link_to 'Edit', edit_mantenimiento_path(@mantenimiento) %> |
-<%= link_to 'Back', mantenimientos_path %>
+	<%= link_to 'Editar', edit_mantenimiento_path(@mantenimiento), class:"button" %>
+	<%= link_to 'Atras', mantenimientos_path, class:"button"%>
+</div>
