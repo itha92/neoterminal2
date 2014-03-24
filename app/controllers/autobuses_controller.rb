@@ -25,12 +25,24 @@ class AutobusesController < ApplicationController
   # POST /autobuses.json
   def create
     @autobus = Autobus.new(autobus_params)
-
     respond_to do |format|
       @autobus.is_taken = false
       if @autobus.save
         format.html { redirect_to @autobus, notice: 'Autobus was successfully created.' }
         format.json { render action: 'show', status: :created, location: @autobus }
+
+        1.upto(@autobus.capacidad.to_i) { |n| 
+          @asiento = Asiento.new
+          @asiento.is_active = true
+          @asiento.asiento_no = n
+          @asiento.autobus_id = @autobus.id
+          if (n < @autobus.capacidad.to_i/2)
+            @asiento.tipo = 'V'
+          else
+            @asiento.tipo = 'P'
+          end
+          @asiento.save
+        }
       else
         format.html { render action: 'new' }
         format.json { render json: @autobus.errors, status: :unprocessable_entity }

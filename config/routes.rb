@@ -21,7 +21,9 @@ Neoterminal2::Application.routes.draw do
 
   resources :autobuses
 
-  resources :asignar_bus_a_empleado
+  resources :asignar_asientos
+
+  post 'asignar_asientos/asign' => 'asignar_asientos#asign'
 
   post 'boletos/get_total' => 'boletos#get_total'
 
