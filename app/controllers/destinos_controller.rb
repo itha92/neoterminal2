@@ -28,8 +28,8 @@ class DestinosController < ApplicationController
 
     respond_to do |format|
       if @destino.save
-        format.html { redirect_to @destino, notice: 'Destino was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @destino }
+        format.html { redirect_to destinos_path, notice: 'Destino creado correctamente.' }
+        format.json { render action: 'index', status: :created, location: @destino }
       else
         format.html { render action: 'new' }
         format.json { render json: @destino.errors, status: :unprocessable_entity }

@@ -7,7 +7,8 @@ class CreateBoletos < ActiveRecord::Migration
       t.decimal :total
       t.references :precio_boletos, index: true
       t.references :terminal, index: true
-      
+      t.references :itinerario, index: true
+
       t.timestamps
     end
   end

@@ -29,9 +29,9 @@
 				<td><%= boleto.precio_boletos_id %></td>
 				<td><%= boleto.terminal.codigo %></td>
 				<td><%= boleto.itinerarios_id %></td>
-				<td><%= link_to 'Show', boleto %></td>
-				<td><%= link_to 'Edit', edit_boleto_path(boleto) %></td>
-				<td><%= link_to 'Destroy', boleto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				<td><%= link_to 'Mostrar', boleto %></td>
+				<td><%= link_to 'Editar', edit_boleto_path(boleto) %></td>
+				<td><%= link_to 'Eliminar', boleto, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
 			</tr>
 		<% end %>
 	</tbody>

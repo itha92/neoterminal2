@@ -19,7 +19,7 @@
 	<tbody>
 	<% @itinerarios.each do |itinerario| %>
 		<tr>
-		<td><%= itinerario.hora_salida %></td>
+		<td><%= itinerario.hora_salida.to_formatted_s(:time) %></td>
 		<td><%= itinerario.destino %></td>
 		<td><%= itinerario.origen %></td>
 		<td><%= itinerario.fecha %></td>
@@ -34,5 +34,5 @@
 
 <br>
 
-<%= link_to 'New Itinerario', new_itinerario_path , class:"button"%>
+<%= link_to 'Nuevo Itinerario', new_itinerario_path , class:"button"%>
 </div>

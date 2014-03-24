@@ -16,6 +16,7 @@ class BoletosController < ApplicationController
   # GET /boletos/1
   # GET /boletos/1.json
   def show
+    
   end
 
   # GET /boletos/new
@@ -54,7 +55,7 @@ class BoletosController < ApplicationController
   def update
     respond_to do |format|
       if @boleto.update(boleto_params)
-        format.html { redirect_to @boleto, notice: 'Boleto was successfully updated.' }
+        format.html { redirect_to @boleto, notice: 'Boleto actualizado exitosamente.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
