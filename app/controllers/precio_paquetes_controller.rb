@@ -28,7 +28,7 @@ class PrecioPaquetesController < ApplicationController
 
     respond_to do |format|
       if @precio_paquete.save
-        format.html { redirect_to @precio_paquete, notice: 'Precio paquete was successfully created.' }
+        format.html { redirect_to @precio_paquete, notice: 'Precio paquete creado existosamente.' }
         format.json { render action: 'show', status: :created, location: @precio_paquete }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class PrecioPaquetesController < ApplicationController
   def update
     respond_to do |format|
       if @precio_paquete.update(precio_paquete_params)
-        format.html { redirect_to @precio_paquete, notice: 'Precio paquete was successfully updated.' }
+        format.html { redirect_to @precio_paquete, notice: 'Precio paquete actualizado existosamente.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

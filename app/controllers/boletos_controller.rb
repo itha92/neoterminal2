@@ -11,12 +11,14 @@ class BoletosController < ApplicationController
   # GET /boletos.json
   def index
     @boletos = Boleto.all
+    
   end
 
   # GET /boletos/1
   # GET /boletos/1.json
   def show
-    
+    @horario_terminal = Itinerario.find(@boleto.itinerarios_id)
+    @precio_boleto = PrecioBoleto.find(@boleto.precio_boletos_id)
   end
 
   # GET /boletos/new

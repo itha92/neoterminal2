@@ -1,6 +1,12 @@
 
 $('#new_boleto').ready(function () {
 	
+	$.each($('#boleto_itinerarios_id option'), function(index, el){
+		var tmp = $(el).text();
+		var nueva_hora = tmp.substring(11,16);
+		$(el).text(nueva_hora);
+	});
+
 	var poblar_sub_total = function(){
 		var data = {};
 		data.id_boleto = $('#boleto_precio_boletos_id').val();
@@ -25,7 +31,10 @@ $('#new_boleto').ready(function () {
 	actualizar_total();
 });
 
-$('.new_boleto').submit(function () {
+	
+	$('.show_boletos span').text($('.show_boletos span').text().substring(11,16));
+
+	$('.new_boleto').submit(function () {
 
     // Get the Login Name value and trim it
     var id = $.trim($('#boleto_identidad').val());

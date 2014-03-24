@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row show_boletos">
 	
 	<p id="notice"><%= notice %></p>
 
@@ -18,7 +18,7 @@
 
 	<p>
 		<strong>Hora de Salida:</strong>
-		<%= @boleto.itinerarios_id %>
+		<span><%= @horario_terminal.hora_salida %></span>
 	</p>
 
 	<p>
@@ -36,10 +36,11 @@
 		<%= @boleto.total %>
 	</p>
 
+
 	<%unless @boleto.precio_boletos_id.nil? %>
 		<p>
-		<strong>Precio boletos:</strong>
-		<%= @boleto.precio_boletos_id %>
+		<strong>Ruta:</strong>
+		<%= @precio_boleto.origen %> - <%= @precio_boleto.destino%>
 		</p>
 	<%end%>
 

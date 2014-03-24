@@ -17,12 +17,14 @@ class EncomiendasController < ApplicationController
 		@encomienda = Encomienda.new
 		@precios = PrecioPaquete.all
 		@terminales = Terminal.all
+		@lugares = Destino.all
 	end
 
 	# GET /encomiendas/1/edit
 	def edit
 		@precios = PrecioPaquete.all
 		@terminales = Terminal.all
+		@lugares = Destino.all
 	end
 
 	# POST /encomiendas

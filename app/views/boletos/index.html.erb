@@ -15,7 +15,6 @@
 			<th>Itinerario</th>
 			<th></th>
 			<th></th>
-			<th></th>
 		</tr>
 	</thead>
 
@@ -31,7 +30,6 @@
 				<td><%= boleto.itinerarios_id %></td>
 				<td><%= link_to 'Mostrar', boleto %></td>
 				<td><%= link_to 'Editar', edit_boleto_path(boleto) %></td>
-				<td><%= link_to 'Eliminar', boleto, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
 			</tr>
 		<% end %>
 	</tbody>
