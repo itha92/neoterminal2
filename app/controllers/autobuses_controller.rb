@@ -28,7 +28,7 @@ class AutobusesController < ApplicationController
     respond_to do |format|
       @autobus.is_taken = false
       if @autobus.save
-        format.html { redirect_to @autobus, notice: 'Autobus was successfully created.' }
+        format.html { redirect_to @autobus, notice: 'Autobus creado exitosamente.' }
         format.json { render action: 'show', status: :created, location: @autobus }
 
         1.upto(@autobus.capacidad.to_i) { |n| 
@@ -55,7 +55,7 @@ class AutobusesController < ApplicationController
   def update
     respond_to do |format|
       if @autobus.update(autobus_params)
-        format.html { redirect_to @autobus, notice: 'Autobus was successfully updated.' }
+        format.html { redirect_to @autobus, notice: 'Autobus actualizado exitosamente.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
