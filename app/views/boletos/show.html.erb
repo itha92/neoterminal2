@@ -1,48 +1,53 @@
 <div class="row">
 	
-<p id="notice"><%= notice %></p>
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Fecha:</strong>
-  <%= @boleto.fecha %>
-</p>
+	<p>
+		<strong>Fecha:</strong>
+		<%= @boleto.fecha %>
+	</p>
 
-<p>
-	<strong>Identidad:</strong>
-	<%= @boleto.identidad%>
-</p>
-<p>
-	<strong>Nombre de Pasajero:</strong>
-	<%= @boleto.nombre%>
-</p>
+	<p>
+		<strong>Identidad:</strong>
+		<%= @boleto.identidad%>
+	</p>
+	<p>
+		<strong>Nombre de Pasajero:</strong>
+		<%= @boleto.nombre%>
+	</p>
 
-<p>
-  <strong>Descuento:</strong>
-  <%= @boleto.descuento %>
-</p>
+	<p>
+		<strong>Hora de Salida:</strong>
+		<%= @boleto.itinerarios_id%>
+	</p>
 
-<p>
-  <strong>Subtotal:</strong>
-  <%= @boleto.subtotal %>
-</p>
+	<p>
+		<strong>Descuento:</strong>
+		<%= @boleto.descuento %>
+	</p>
 
-<p>
-  <strong>Total:</strong>
-  <%= @boleto.total %>
-</p>
+	<p>
+		<strong>Subtotal:</strong>
+		<%= @boleto.subtotal %>
+	</p>
 
-<%unless @boleto.precio_boletos_id.nil? %>
-  <p>
-	<strong>Precio boletos:</strong>
-	<%= @boleto.precio_boletos_id %>
-  </p>
-<%end%>
+	<p>
+		<strong>Total:</strong>
+		<%= @boleto.total %>
+	</p>
 
-<p>
-  <strong>Terminal:</strong>
-  <%= @boleto.terminal.codigo %>
-</p>
+	<%unless @boleto.precio_boletos_id.nil? %>
+		<p>
+		<strong>Precio boletos:</strong>
+		<%= @boleto.precio_boletos_id %>
+		</p>
+	<%end%>
 
-<%= link_to 'Edit', edit_boleto_path(@boleto), class:"button" %>
-<%= link_to 'Back', boletos_path, class:"button" %>
+	<p>
+		<strong>Terminal:</strong>
+		<%= @boleto.terminal.codigo %>
+	</p>
+
+	<%= link_to 'Editar', edit_boleto_path(@boleto), class:"button" %>
+	<%= link_to 'Atras', boletos_path, class:"button" %>
 </div>

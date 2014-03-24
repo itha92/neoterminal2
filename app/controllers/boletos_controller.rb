@@ -40,7 +40,7 @@ class BoletosController < ApplicationController
 
     respond_to do |format|
       if @boleto.save
-        format.html { redirect_to @boleto, notice: 'Boleto was successfully created.' }
+        format.html { redirect_to @boleto, notice: 'Boleto creado exitosamente.' }
         format.json { render action: 'show', status: :created, location: @boleto }
       else
         format.html { render action: 'new' }
@@ -81,6 +81,6 @@ class BoletosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def boleto_params
-      params.require(:boleto).permit(:fecha, :descuento, :subtotal, :total, :precio_boletos_id, :terminal_id, :nombre, :identidad)
+      params.require(:boleto).permit(:fecha, :descuento, :subtotal, :total, :precio_boletos_id, :terminal_id, :nombre, :identidad, :itinerarios_id)
     end
 end

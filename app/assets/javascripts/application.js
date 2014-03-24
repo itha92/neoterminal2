@@ -31,7 +31,7 @@ $(document).ready(function () {
 	};
 
 	var actualizar_total = function(){
-		$('#boleto_total').val($('#boleto_subtotal').val() - $('#boleto_descuento').val());
+		$('#boleto_total').val( $('#boleto_subtotal').val() - ($('#boleto_subtotal').val() * ($('#boleto_descuento').val())/100));
 	};
 
 	$('#boleto_descuento').val(0);
@@ -43,6 +43,21 @@ $(document).ready(function () {
 
 	poblar_sub_total();
 	actualizar_total();
+});
 
+$('.new_boleto').submit(function () {
 
+    // Get the Login Name value and trim it
+    var id = $.trim($('#boleto_identidad').val());
+    var name = $.trim($('#boleto_nombre').val());
+
+    // Check if empty of not
+    if (id  === '' && name === '') {
+    	
+    	$('.panel').append('<div data-alert class="alert-box">No puede dejar campos vacios<a class="close">&times;</a></div>');
+    	$('a.close').on('click',function(){
+    		$(this).parent().remove();
+    	})
+        return false;
+    }
 });

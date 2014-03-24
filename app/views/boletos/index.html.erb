@@ -9,11 +9,10 @@
 			<th>Fecha</th>
 			<th>Nombre</th>
 			<th>Identidad</th>
-			<th>Descuento</th>
-			<th>Subtotal</th>
 			<th>Total</th>
 			<th>Precio boletos</th>
 			<th>Terminal</th>
+			<th>Itinerario</th>
 			<th></th>
 			<th></th>
 			<th></th>
@@ -26,11 +25,10 @@
 				<td><%= boleto.fecha %></td>
 				<td><%= boleto.nombre %></td>
 				<td><%= boleto.identidad %></td>
-				<td><%= boleto.descuento %></td>
-				<td><%= boleto.subtotal %></td>
 				<td><%= boleto.total %></td>
 				<td><%= boleto.precio_boletos_id %></td>
 				<td><%= boleto.terminal.codigo %></td>
+				<td><%= boleto.itinerarios_id %></td>
 				<td><%= link_to 'Show', boleto %></td>
 				<td><%= link_to 'Edit', edit_boleto_path(boleto) %></td>
 				<td><%= link_to 'Destroy', boleto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
