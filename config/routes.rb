@@ -23,7 +23,6 @@ Neoterminal2::Application.routes.draw do
 
   resources :asignar_bus_a_empleado
 
-  get 'asignar_bus_a_empleado/asign' => 'asignar_bus_a_empleado#asignar'
 
   post 'boletos/get_total' => 'boletos#get_total'
 
