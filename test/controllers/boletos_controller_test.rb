@@ -18,7 +18,7 @@ class BoletosControllerTest < ActionController::TestCase
 
   test "should create boleto" do
     assert_difference('Boleto.count') do
-      post :create, boleto: { descuento: @boleto.descuento, fecha: @boleto.fecha, precio_boletos_id: @boleto.precio_boletos_id, subtotal: @boleto.subtotal, terminal_id: @boleto.terminal_id, total: @boleto.total }
+      post :create, boleto: { asiento_id: @boleto.asiento_id, descuento: @boleto.descuento, fecha: @boleto.fecha, identidad: @boleto.identidad, itinerario_id: @boleto.itinerario_id, nombre: @boleto.nombre, precio_boletos_id: @boleto.precio_boletos_id, subtotal: @boleto.subtotal, terminal_id: @boleto.terminal_id, total: @boleto.total }
     end
 
     assert_redirected_to boleto_path(assigns(:boleto))
@@ -35,7 +35,7 @@ class BoletosControllerTest < ActionController::TestCase
   end
 
   test "should update boleto" do
-    patch :update, id: @boleto, boleto: { descuento: @boleto.descuento, fecha: @boleto.fecha, precio_boletos_id: @boleto.precio_boletos_id, subtotal: @boleto.subtotal, terminal_id: @boleto.terminal_id, total: @boleto.total }
+    patch :update, id: @boleto, boleto: { asiento_id: @boleto.asiento_id, descuento: @boleto.descuento, fecha: @boleto.fecha, identidad: @boleto.identidad, itinerario_id: @boleto.itinerario_id, nombre: @boleto.nombre, precio_boletos_id: @boleto.precio_boletos_id, subtotal: @boleto.subtotal, terminal_id: @boleto.terminal_id, total: @boleto.total }
     assert_redirected_to boleto_path(assigns(:boleto))
   end
 

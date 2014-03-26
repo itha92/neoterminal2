@@ -17,7 +17,7 @@ class BoletosController < ApplicationController
   # GET /boletos/1
   # GET /boletos/1.json
   def show
-    @horario_terminal = Itinerario.find(@boleto.itinerarios_id)
+    @horario_terminal = Itinerario.find(@boleto.itinerario_id)
     @precio_boleto = PrecioBoleto.find(@boleto.precio_boletos_id)
   end
 
@@ -40,7 +40,10 @@ class BoletosController < ApplicationController
   # POST /boletos.json
   def create
     @boleto = Boleto.new(boleto_params)
-
+    @asientos = Asiento.where({is_active: true, autobus_id: @boleto.itinerario.autobus_id }).first
+    @asientos.is_active = false
+    @boleto.asiento = @asientos
+    @asientos.save
     respond_to do |format|
       if @boleto.save
         format.html { redirect_to @boleto, notice: 'Boleto creado exitosamente.' }
@@ -84,6 +87,6 @@ class BoletosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def boleto_params
-      params.require(:boleto).permit(:fecha, :descuento, :subtotal, :total, :precio_boletos_id, :terminal_id, :nombre, :identidad, :itinerarios_id)
+      params.require(:boleto).permit(:fecha, :descuento, :subtotal, :total, :precio_boletos_id, :terminal_id, :nombre, :identidad, :itinerario_id)
     end
 end

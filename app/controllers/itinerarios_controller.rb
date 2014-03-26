@@ -17,19 +17,20 @@ class ItinerariosController < ApplicationController
 		@itinerario = Itinerario.new
 		@terminales = Terminal.all
 		@destinos = Destino.all
+		@autobuses = Autobus.all
 	end
 
 	# GET /itinerarios/1/edit
 	def edit
 		@terminales = Terminal.all
 		@destinos = Destino.all
+		@autobuses = Autobus.all
 	end
 
 	# POST /itinerarios
 	# POST /itinerarios.json
 	def create
 		@itinerario = Itinerario.new(itinerario_params)
-
 		respond_to do |format|
 			
 			if @itinerario.save
@@ -74,6 +75,6 @@ class ItinerariosController < ApplicationController
 
 		# Never trust parameters from the scary internet, only allow the white list through.
 		def itinerario_params
-			params.require(:itinerario).permit(:hora_salida, :destino, :origen, :fecha, :terminal_id)
+			params.require(:itinerario).permit(:hora_salida, :destino, :origen, :fecha, :terminal_id,:autobus_id)
 		end
 end

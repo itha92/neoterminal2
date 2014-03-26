@@ -1,17 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  fecha: 2014-03-18
+  fecha: 2014-03-25
   descuento: 9.99
   subtotal: 9.99
   total: 9.99
-  precio_boletos_id: 
+  precio_boletos_id: 9.99
+  nombre: MyString
+  identidad: MyString
   terminal_id: 
+  itinerario_id: 
+  asiento_id: 
 
 two:
-  fecha: 2014-03-18
+  fecha: 2014-03-25
   descuento: 9.99
   subtotal: 9.99
   total: 9.99
-  precio_boletos_id: 
+  precio_boletos_id: 9.99
+  nombre: MyString
+  identidad: MyString
   terminal_id: 
+  itinerario_id: 
+  asiento_id: 

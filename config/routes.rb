@@ -1,11 +1,11 @@
 Neoterminal2::Application.routes.draw do
+  resources :boletos
+
   resources :destinos
 
   resources :encomiendas
 
   resources :precio_paquetes
-
-  resources :boletos
 
   resources :empleados
 

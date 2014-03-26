@@ -11,7 +11,11 @@
 			<th>Nombre</th>
 			<th>Identidad</th>
 			<th>Total</th>
+			<th>Itinerario</th>
+			<th>Autobus</th>
+			<th>Asiento</th>
 			<th>Terminal</th>
+			<th></th>
 			<th></th>
 			<th></th>
 		</tr>
@@ -25,6 +29,9 @@
 				<td><%= boleto.nombre %></td>
 				<td><%= boleto.identidad %></td>
 				<td><%= boleto.total %></td>
+				<td><%= boleto.itinerario.hora_salida %></td>
+				<td><%= boleto.itinerario.autobus.codigo %></td>
+				<td><%= boleto.asiento.asiento_no %></td>
 				<td><%= boleto.terminal.codigo %></td>
 				<td><%= link_to 'Mostrar', boleto %></td>
 				<td><%= link_to 'Editar', edit_boleto_path(boleto) %></td>

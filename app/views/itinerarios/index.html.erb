@@ -10,6 +10,7 @@
 		<th>Origen</th>
 		<th>Fecha</th>
 		<th>Terminal</th>
+		<th>Autobus</th>
 		<th></th>
 		<th></th>
 		<th></th>
@@ -24,6 +25,7 @@
 		<td><%= itinerario.origen %></td>
 		<td><%= itinerario.fecha %></td>
 		<td><%= itinerario.terminal.codigo %></td>
+		<td><%= itinerario.autobus.codigo %></td>
 		<td><%= link_to 'Mostrar', itinerario %></td>
 		<td><%= link_to 'Editar', edit_itinerario_path(itinerario) %></td>
 		<td><%= link_to 'Eliminar', itinerario, method: :delete, data: { confirm: 'Esta seguro?' } %></td>

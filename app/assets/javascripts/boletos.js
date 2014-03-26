@@ -1,7 +1,7 @@
 
-$('.boleto_form').ready(function () {
+$('#new_boleto').ready(function () {
 	
-	$.each($('#boleto_itinerarios_id option'), function(index, el){
+	$.each($('#boleto_itinerario_id option'), function(index, el){
 		var tmp = $(el).text();
 		var nueva_hora = tmp.substring(11,16);
 		$(el).text(nueva_hora);
@@ -34,7 +34,7 @@ $('.boleto_form').ready(function () {
 	
 	$('.show_boletos span').text($('.show_boletos span').text().substring(11,16));
 
-	$('.boleto_form').submit(function () {
+	$('#new_boleto').submit(function () {
 
     // Get the Login Name value and trim it
     var id = $.trim($('#boleto_identidad').val());

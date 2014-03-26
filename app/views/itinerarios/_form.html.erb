@@ -42,6 +42,14 @@
 		</div>
 	</div>
 	<div class="large-2 columns">
+		<div class="field">
+			<%= f.label :autobus_id %>
+			<%= collection_select(:itinerario, :autobus_id, @autobuses, :id, :codigo) %>
+		</div>
+	</div>
+	</div>
+	<div class="row">
+	<div class="large-2 columns">
 		<div class="actions">
 			<%= f.submit %>
 		</div>

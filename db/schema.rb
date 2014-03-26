@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140324013940) do
+ActiveRecord::Schema.define(version: 20140326044329) do
 
   create_table "asientos", force: true do |t|
     t.string   "asiento_no"
@@ -40,17 +40,18 @@ ActiveRecord::Schema.define(version: 20140324013940) do
     t.decimal  "descuento",         precision: 10, scale: 0
     t.decimal  "subtotal",          precision: 10, scale: 0
     t.decimal  "total",             precision: 10, scale: 0
-    t.integer  "precio_boletos_id"
-    t.integer  "terminal_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.decimal  "precio_boletos_id", precision: 10, scale: 0
     t.string   "nombre"
     t.string   "identidad"
-    t.integer  "itinerarios_id"
+    t.integer  "terminal_id"
+    t.integer  "itinerario_id"
+    t.integer  "asiento_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "boletos", ["itinerarios_id"], name: "index_boletos_on_itinerarios_id", using: :btree
-  add_index "boletos", ["precio_boletos_id"], name: "index_boletos_on_precio_boletos_id", using: :btree
+  add_index "boletos", ["asiento_id"], name: "index_boletos_on_asiento_id", using: :btree
+  add_index "boletos", ["itinerario_id"], name: "index_boletos_on_itinerario_id", using: :btree
   add_index "boletos", ["terminal_id"], name: "index_boletos_on_terminal_id", using: :btree
 
   create_table "destinos", force: true do |t|
@@ -105,8 +106,10 @@ ActiveRecord::Schema.define(version: 20140324013940) do
     t.integer  "terminal_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "autobus_id"
   end
 
+  add_index "itinerarios", ["autobus_id"], name: "index_itinerarios_on_autobus_id", using: :btree
   add_index "itinerarios", ["terminal_id"], name: "index_itinerarios_on_terminal_id", using: :btree
 
   create_table "mantenimientos", force: true do |t|
