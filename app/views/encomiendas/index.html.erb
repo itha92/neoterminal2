@@ -11,11 +11,9 @@
 		<th>Peso</th>
 		<th>Destino</th>
 		<th>Origen</th>
-		<th>Is delivered</th>
-		<th>Is shipped</th>
-		<th>Is onhold</th>
 		<th>Fecha</th>
 		<th>Terminal</th>
+		<th>Tipo paquete</th>
 		<th>Precio paquete</th>
 		<th></th>
 		<th></th>
@@ -31,12 +29,10 @@
 			<td><%= encomienda.peso %></td>
 			<td><%= encomienda.destino %></td>
 			<td><%= encomienda.origen %></td>
-			<td><%= encomienda.is_delivered %></td>
-			<td><%= encomienda.is_shipped %></td>
-			<td><%= encomienda.is_onhold %></td>
 			<td><%= encomienda.fecha %></td>
 			<td><%= encomienda.terminal.codigo %></td>
 			<td><%= encomienda.precio_paquete.tipo_paquete %></td>
+			<td><%= encomienda.precio_paquete.precio %></td>
 			<td><%= link_to 'Mostrar', encomienda %></td>
 			<td><%= link_to 'Editar', edit_encomienda_path(encomienda) %></td>
 		</tr>

@@ -2,60 +2,16 @@
 	
 	<p id="notice"><%= notice %></p>
 
-	<p>
-		<strong>Destinatario:</strong>
-		<%= @encomienda.destinatario %>
-	</p>
-
-	<p>
-		<strong>Remitente:</strong>
-		<%= @encomienda.remitente %>
-	</p>
-
-	<p>
-		<strong>Peso:</strong>
-		<%= @encomienda.peso %>
-	</p>
-
-	<p>
-		<strong>Destino:</strong>
-		<%= @encomienda.destino %>
-	</p>
-
-	<p>
-		<strong>Origen:</strong>
-		<%= @encomienda.origen %>
-	</p>
-
-	<p>
-		<strong>Is delivered:</strong>
-		<%= @encomienda.is_delivered %>
-	</p>
-
-	<p>
-		<strong>Is shipped:</strong>
-		<%= @encomienda.is_shipped %>
-	</p>
-
-	<p>
-		<strong>Is onhold:</strong>
-		<%= @encomienda.is_onhold %>
-	</p>
-
-	<p>
-		<strong>Fecha:</strong>
-		<%= @encomienda.fecha %>
-	</p>
-
-	<p>
-		<strong>Terminal:</strong>
-		<%= @encomienda.terminal.codigo %>
-	</p>
-
-	<p>
-		<strong>Precio paquete:</strong>
-		<%= @encomienda.precio_paquete.tipo_paquete %>
-	</p>
+	<ul class="pricing-table">
+		<li class="title">Destinatario: <%= @encomienda.destinatario %></li>
+		<li class="title">Remitente: <%= @encomienda.remitente %></li>
+		<li class="price">Lps. <%= @encomienda.precio_paquete.precio %></li>
+		<li class="description">Destino: <%= @encomienda.destino %></li>
+		<li class="description">Origen: <%= @encomienda.origen %></li>
+		<li class="bullet-item">Fecha: <%= @encomienda.fecha %></li>
+		<li class="bullet-item">Terminal: <%= @encomienda.terminal.codigo %></li>
+		<li class="cta-button"><a class="button imprimir">Imprimir</a></li>
+	</ul>
 
 	<%= link_to 'Editar', edit_encomienda_path(@encomienda), class:"button" %>
 	<%= link_to 'Atras', encomiendas_path, class:"button" %>
