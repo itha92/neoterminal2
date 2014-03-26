@@ -67,13 +67,15 @@
 					<%= f.check_box :is_onhold %>
 				</div>
 			</div>
-			<div class="large-2 columns">
+			<div class="large-3 columns">
 				<div class="field">
 					<%= f.label :fecha %>
+					<div class="date">
 					<%= f.date_select :fecha %>
+					</div>
 				</div>
 			</div>
-			<div class="large-4 columns">
+			<div class="large-3 columns">
 				<div class="field">
 					<%= f.label :terminal_id %>
 					<%= collection_select(:encomienda, :terminal_id, @terminales, :id, :codigo) %>
@@ -91,7 +93,7 @@
 		</div>
 		<div class="large-2 columns">
 			<div class="actions">
-				<%= f.submit %>
+				<%= f.submit class: 'button', style: 'margin-top: 1em' %>
 			</div>
 		</div>
 	</div>
